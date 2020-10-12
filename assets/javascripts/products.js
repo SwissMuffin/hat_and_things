@@ -1,7 +1,7 @@
 /*    1. Define a simple JavaScript object that represents a hat, with properties name,
  price, color, and imageHref.*/
 
-let Hat = {
+Hat = {
     name:"<name>",
     price:"<price>",
     color:"<color>",
@@ -15,8 +15,9 @@ return a String that nicely formats the properties of the hat object i.e. "<name
 */
 
 toString = () => {
-    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
+    return `name ${Hat.name} price ${Hat.price} color ${Hat.color} imageHref ${Hat.imageHref}`
 };
+
 
 
 
