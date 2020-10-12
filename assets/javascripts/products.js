@@ -14,6 +14,10 @@ return a String that nicely formats the properties of the hat object i.e. "<name
  console.log().
 */
 
+toString = () => {
+    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
+};
+
 
 
 
