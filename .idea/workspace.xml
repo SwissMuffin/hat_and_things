@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="" />
+    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -21,11 +28,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/prototypes-and-this" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -47,41 +54,84 @@
       <option name="presentableId" value="Default" />
       <updated>1602510711677</updated>
       <workItem from="1602510713120" duration="476000" />
-      <workItem from="1602511211605" duration="5361000" />
+      <workItem from="1602511211605" duration="6664000" />
+      <workItem from="1602574664507" duration="5034000" />
+      <workItem from="1602657586032" duration="1150000" />
+      <workItem from="1602667844323" duration="4078000" />
+      <workItem from="1602777418724" duration="61000" />
+      <workItem from="1603296766992" duration="2280000" />
+      <workItem from="1603299713894" duration="1528000" />
+      <workItem from="1603700182765" duration="1921000" />
+      <workItem from="1603813654693" duration="4680000" />
+      <workItem from="1603880232196" duration="3837000" />
+      <workItem from="1603910922667" duration="117000" />
+      <workItem from="1604333051182" duration="3383000" />
+      <workItem from="1604342007405" duration="620000" />
+      <workItem from="1604343739570" duration="575000" />
+      <workItem from="1605183666282" duration="4830000" />
+      <workItem from="1605200284696" duration="1212000" />
+      <workItem from="1605258984849" duration="12697000" />
+      <workItem from="1605291456988" duration="401000" />
+      <workItem from="1605352536311" duration="123000" />
+      <workItem from="1605357221706" duration="37000" />
+      <workItem from="1605357278369" duration="813000" />
+      <workItem from="1605361045777" duration="2540000" />
+      <workItem from="1605374010659" duration="4164000" />
+      <workItem from="1605538198017" duration="1889000" />
+      <workItem from="1605615630496" duration="5123000" />
+      <workItem from="1605632407057" duration="2487000" />
+      <workItem from="1605641243918" duration="212000" />
+      <workItem from="1605690650019" duration="7651000" />
+      <workItem from="1605709083781" duration="3249000" />
+      <workItem from="1605715194741" duration="4398000" />
+      <workItem from="1605719685790" duration="704000" />
+      <workItem from="1605721257947" duration="1095000" />
+      <workItem from="1605729383878" duration="122000" />
+      <workItem from="1605803433275" duration="3443000" />
+      <workItem from="1605867297061" duration="4196000" />
+      <workItem from="1605877730316" duration="6213000" />
+      <workItem from="1605889847442" duration="198000" />
+      <workItem from="1605891846372" duration="1450000" />
+      <workItem from="1605896740009" duration="968000" />
+      <workItem from="1605898668321" duration="887000" />
+      <workItem from="1605903308141" duration="1911000" />
+      <workItem from="1606127926955" duration="595000" />
+      <workItem from="1606135911788" duration="6449000" />
+      <workItem from="1606203717278" duration="3178000" />
+      <workItem from="1606213004284" duration="3905000" />
+      <workItem from="1606216982106" duration="1525000" />
+      <workItem from="1606228091171" duration="3751000" />
+      <workItem from="1606236256487" duration="3001000" />
+      <workItem from="1606292146143" duration="7205000" />
+      <workItem from="1606312429401" duration="92000" />
+      <workItem from="1606314099271" duration="735000" />
+      <workItem from="1606318392266" duration="68000" />
+      <workItem from="1606401499635" duration="523000" />
+      <workItem from="1606404905292" duration="860000" />
+      <workItem from="1606478756102" duration="520000" />
+      <workItem from="1606481175632" duration="4012000" />
+      <workItem from="1606486873803" duration="3000" />
+      <workItem from="1606493886304" duration="607000" />
+      <workItem from="1606839909921" duration="71000" />
+      <workItem from="1606840020388" duration="123000" />
+      <workItem from="1606840186155" duration="1359000" />
+      <workItem from="1607430274746" duration="7507000" />
+      <workItem from="1607614917090" duration="2110000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="178" y="0" key="#Plugins" timestamp="1602511228853">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="178" y="0" key="#Plugins/0.0.1368.872@0.0.1368.872" timestamp="1602511228853" />
-    <state x="412" y="117" key="FileChooserDialogImpl" timestamp="1602511191875">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="412" y="117" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1602511191875" />
-    <state width="1328" height="200" key="GridCell.Tab.0.bottom" timestamp="1602517454666">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1328" height="200" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1602517454666" />
-    <state width="1328" height="200" key="GridCell.Tab.0.center" timestamp="1602517454666">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1328" height="200" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1602517454666" />
-    <state width="1328" height="200" key="GridCell.Tab.0.left" timestamp="1602517454666">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1328" height="200" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1602517454666" />
-    <state width="1328" height="200" key="GridCell.Tab.0.right" timestamp="1602517454666">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1328" height="200" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1602517454666" />
-    <state x="82" y="0" key="SettingsEditor" timestamp="1602511684220">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="82" y="0" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1602511684220" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
