@@ -60,39 +60,19 @@ const chapeu3 = new HAT("Bicorne", "60fr", "Preto", "whatever");
 // TASK 05 Define an array of hat objects using the Hat prototype that represent all of the hats in
 // the static HTML.
 
-function arrAllHatStatic () {
+function arrAllHats () {
     const allHats = document.querySelectorAll(".card");
-    let hatArr = [];
-    let allArrHats = [];
+    const hatArr = [];
+    const allArrHats = [];
     for (let i = 0; i < allHats.length; i++) {
         const valName = allHats[i].children[2].children[0].textContent
         const valPrice = allHats[i].children[0].textContent;
         const valColor = allHats[i].children[2].children[1].children[0].textContent;
         //const valImage = allHats[i].children[1].src;
-
-       hatArr[i] = new HAT(`${valName}`,`${valPrice}`,`${valColor}`); // each iteration creates a new object according to the hat Prototype.
-
-       allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
-
-    }console.log(allArrHats);
-
-    //console.log(hatArr.length);
+        hatArr[i] = new HAT(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
+        allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
+    } console.log(allArrHats);
 }
-
-
-function staticHats () {
-    const allItems = document.querySelectorAll(".card");
-    for(let i = 0; i < allItems.length ; i ++) {
-        console.log(allItems[i].children[1].src); // name
-    }
-}
-
-
-
-/*allHats = [
-    const firstHat = new HAT("")
-];*/
-
 /*------------------------------------------------TASK 06--------------------------------------------------------*/
 
 /*
