@@ -63,15 +63,18 @@ const chapeu3 = new HAT("Bicorne", "60fr", "Preto", "whatever");
 function arrAllHatStatic () {
     const allHats = document.querySelectorAll(".card");
     let hatArr = [];
+    let allArrHats = [];
     for (let i = 0; i < allHats.length; i++) {
         const valName = allHats[i].children[2].children[0].textContent
         const valPrice = allHats[i].children[0].textContent;
         const valColor = allHats[i].children[2].children[1].children[0].textContent;
         //const valImage = allHats[i].children[1].src;
 
-       hatArr = new HAT(`${valName}`,`${valPrice}`,`${valColor}`);
-       console.log(hatArr);
-    }
+       hatArr[i] = new HAT(`${valName}`,`${valPrice}`,`${valColor}`); // each iteration creates a new object according to the hat Prototype.
+
+       allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
+
+    }console.log(allArrHats);
 
     //console.log(hatArr.length);
 }
