@@ -62,18 +62,28 @@ const chapeu3 = new HAT("Bicorne", "60fr", "Preto", "whatever");
 
 function arrAllHatStatic () {
     const allHats = document.querySelectorAll(".card");
-    let hatArr = Array.from(HAT)
+    let hatArr = [];
     for (let i = 0; i < allHats.length; i++) {
-        let valName = allHats[i].childNodes[5].childNodes[1].textContent;
-        let valPrice = allHats[i].childNodes[1].firstChild.textContent;
-        let valColor = allHats[i].childNodes[5].childNodes[3].childNodes[1].textContent;
-        //valImage = allHats[i].childNodes[3].src;
-        //console.log(`${valName} ` + valColor)
+        const valName = allHats[i].children[2].children[0].textContent
+        const valPrice = allHats[i].children[0].textContent;
+        const valColor = allHats[i].children[2].children[1].children[0].textContent;
+        //const valImage = allHats[i].children[1].src;
 
-        hatArr += ` ${valName}` + ` ${valPrice}` + ` ${valColor},`;
-        // hatArr += ` ${valName}` + ` ${valPrice}` + ` ${valColor},` ;
-    }console.log(hatArr[5]);
+       hatArr = new HAT(`${valName}`,`${valPrice}`,`${valColor}`);
+       console.log(hatArr);
+    }
+
+    //console.log(hatArr.length);
 }
+
+
+function staticHats () {
+    const allItems = document.querySelectorAll(".card");
+    for(let i = 0; i < allItems.length ; i ++) {
+        console.log(allItems[i].children[1].src); // name
+    }
+}
+
 
 
 /*allHats = [
