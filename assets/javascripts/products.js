@@ -60,7 +60,7 @@ const chapeu3 = new HAT("Bicorne", "60fr", "Preto", "whatever");
 // TASK 05 Define an array of hat objects using the Hat prototype that represent all of the hats in
 // the static HTML.
 
-function arrAllHats () {
+function arrAllHats (hatArrays) {
     const allHats = document.querySelectorAll(".card");
     const hatArr = [];
     const allArrHats = [];
@@ -71,7 +71,9 @@ function arrAllHats () {
         //const valImage = allHats[i].children[1].src;
         hatArr[i] = new HAT(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
         allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
-    } console.log(allArrHats);
+    }
+    hatArrays = allArrHats;
+    console.log(hatArrays); // < = variable of this function is the array!!!
 }
 /*------------------------------------------------TASK 06--------------------------------------------------------*/
 
@@ -156,6 +158,9 @@ function highlightSelectedFilter() {
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
         }
     }
+
+    //selecting all hat components that match the color of the filter button that has been clicked.
+    arrAllHats(hatArrays);
 }
 
 // Binding all highlightSelectedFilter function to each button:
