@@ -80,6 +80,13 @@ const valName = allHats[2].children[0].children[2].children[0].children[2].child
 const valPrice = allHats[2].children[0].children[2].children[0].children[0].textContent;
 const valImageHref = allHats[2].children[0].children[2].children[0].children[1].src;
 const valColor = allHats[2].children[0].children[2].children[0].children[2].children[1].children[0].textContent;
+
+for (let i = 0; i < allDomHats.length; i++) {
+    allDomHats[i] = new HAT(`${valName}`, `${valPrice}`, `${valColor}`);
+    const myArray = Array.from(allDomHats);
+}
+
+
 /*
 const hatArr = [];
 const allArrHats = [];

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Trying to pass an argument to the function to represent it as an index of the array.">
+    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="all four variables have been mapped.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
@@ -122,7 +122,7 @@
       <workItem from="1607757689476" duration="2998000" />
       <workItem from="1607784519091" duration="6018000" />
       <workItem from="1607806150051" duration="3529000" />
-      <workItem from="1607855984866" duration="999000" />
+      <workItem from="1607855984866" duration="2575000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607770214079</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="all four variables have been mapped.">
+      <created>1607857127278</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607857127278</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +190,8 @@
     <MESSAGE value="A new array was created by populating from a loop specific target elements from the DOM to dinamically represent the array." />
     <MESSAGE value="I have created a function to represent all the hats on the page." />
     <MESSAGE value="Trying to pass an argument to the function to represent it as an index of the array." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to pass an argument to the function to represent it as an index of the array." />
+    <MESSAGE value="all four variables have been mapped." />
+    <option name="LAST_COMMIT_MESSAGE" value="all four variables have been mapped." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -192,7 +200,7 @@
           <url>file://$PROJECT_DIR$/assets/javascripts/products.js</url>
           <line>76</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
