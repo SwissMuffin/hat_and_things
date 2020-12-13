@@ -76,16 +76,22 @@ const chapeu3 = new HAT("Bicorne", "60fr", "Preto", "whatever");
 
 const allHats = document.querySelectorAll(".container");
 const allDomHats = allHats[2].children[0].children;
-   /* const hatArr = [];
-    const allArrHats = [];
-    for (let i = 0; i < allHats.length; i++) {
-        const valName = allHats[i].allHats[2].children[0].children.textContent
-        const valPrice = allHats[i].children[0].textContent;
-        const valColor = allHats[i].children[2].children[1].children[0].textContent;
+const valName = allHats[2].children[0].children[2].children[0].children[2].children[0].textContent;
+const valPrice = allHats[2].children[0].children[2].children[0].children[0].textContent;
+const valImageHref = allHats[2].children[0].children[2].children[0].children[1].src;
+const valColor = allHats[2].children[0].children[2].children[0].children[2].children[1].children[0].textContent;
+/*
+const hatArr = [];
+const allArrHats = [];
+    for (let i = 0; i < allDomHats.length; i++) {
+        const valName = allDomHats[i].allHats[2].children[0].children.textContent
+        const valPrice = allDomHats[i].children[0].textContent;
+        const valColor = allDomHats[i].children[2].children[1].children[0].textContent;
         //const valImage = allHats[i].children[1].src;
         hatArr[i] = new HAT(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
        allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
-    }*/
+    }
+*/
 
 
 
