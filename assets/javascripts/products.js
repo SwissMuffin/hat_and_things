@@ -74,19 +74,20 @@ const chapeu3 = new HAT("Bicorne", "60fr", "Preto", "whatever");
     }*/
     //console.log(allArrHats); // < = index was added to give access the array elements of this function.
 
-const allHats = document.querySelectorAll(".container");
-const allDomHats = allHats[2].children[0].children;
-   /* const hatArr = [];
-    const allArrHats = [];
-    for (let i = 0; i < allHats.length; i++) {
-        const valName = allHats[i].allHats[2].children[0].children.textContent
-        const valPrice = allHats[i].children[0].textContent;
-        const valColor = allHats[i].children[2].children[1].children[0].textContent;
-        //const valImage = allHats[i].children[1].src;
-        hatArr[i] = new HAT(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
-       allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
-    }*/
+/* --------------------------------------------- CONTAINER ------------------------------------------------------*/
 
+const allHats = document.querySelectorAll(".container");
+const allDomHats = allHats[2].children[0].children; // It loops from this!
+const hatArr = [];
+const allArrHats = [];
+   for (let i = 0; i < allDomHats.length; i++) {
+       const valName = allDomHats[i].children[0].children[2].children[0].textContent;
+       const valPrice = allDomHats[i].children[0].children[0].textContent;
+       const valColor = allDomHats[i].children[0].children[2].children[1].children[0].textContent;
+       //const valImageHref = allDomHats[i].children[0].children[1].src;
+       hatArr[i] = new HAT(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
+       allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
+    }
 
 
 /*------------------------------------------------TASK 06--------------------------------------------------------*/
@@ -163,18 +164,31 @@ function highlightSelectedFilter() {
     // remove the active CSS class form all filter buttons;
     const activeFilter = document.querySelector(".btn-group").children;
     //let colorValue = document.querySelectorAll(".card-text");
+    const arrSelection = [];
     for (let i = 0; i < activeFilter.length; i++) {
         activeFilter[i].classList.remove("active");
         // activates the selection on button tha has been clicked!
         activeFilter[i].addEventListener("click", activateFilter);
-
         function activateFilter() {
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
+            for (let item = 0; item < allArrHats.length; item++){
+                //console.log(allArrHats[item].name);
+                if (allArrHats[item].color === "blue") {
+                    console.log(allArrHats[item].color);
+                }
+            }
         }
     }
 
+
+
+
+
+
+
+
     //selecting all hat components that match the color of the filter button that has been clicked.
-     console.log(allArrHats)
+     //console.log(allArrHats),
 }
 
 // Binding all highlightSelectedFilter function to each button:
