@@ -41,18 +41,14 @@ function Hat(name, price, color, imageHref) {
 
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
 
-const allHats = document.querySelectorAll(".container");
-const allDomHats = allHats[2].children[0].children; // It loops from this!
-
-const allArrHats = [];
+const allHats = document.querySelectorAll(".accessory");
 const hatArr = [];
-   for (let i = 0; i < allDomHats.length; i++) {
-       const valName = allDomHats[i].children[0].children[2].children[0].textContent;
-       const valPrice = allDomHats[i].children[0].children[0].textContent;
-       const valColor = allDomHats[i].children[0].children[2].children[1].children[0].textContent;
-       const valImageHref = allDomHats[i].children[0].children[1].src;
-       hatArr[i] = new Hat(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
-       allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
+   for (let i = 0; i < allHats.length; i++) {
+       const valName = allHats[i].children[0].children[2].children[0].textContent;
+       const valPrice = allHats[i].children[0].children[0].textContent;
+       const valColor = allHats[i].children[0].children[2].children[1].children[0].textContent;
+       const valImageHref = allHats[i].children[0].children[1].src;
+       hatArr.push(new Hat(`${valName}`, `${valPrice}`, `${valColor}`));// each iteration creates a new object according to the hat Prototype.
     }
 
     function displayHat (aHat) {
@@ -114,9 +110,10 @@ function highlightSelectedFilter() {
         function activateFilter(e) {
             e.preventDefault();
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
-            for (let i = 0; i < allArrHats.length; i++) {
-                if (allArrHats[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
-                    allArrHats[i].setAttribute("class", "active");
+            const colorArr = [];
+            for (let i = 0; i < hatArr.length; i++) {
+                if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
+
                 }
                 //allArrHats[i].target.className.setAttribute("class", )
                 let val = e.target.textContent.toLowerCase();
