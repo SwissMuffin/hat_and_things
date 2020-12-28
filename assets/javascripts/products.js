@@ -111,9 +111,10 @@ function highlightSelectedFilter() {
             e.preventDefault();
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
             const colorArr = [];
-            for (let i = 0; i < hatArr.length; i++) {
-                if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
-
+            for (let i = 0; i < allHats.length; i++) {
+                if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all hat color buttons match
+                    allHats[i].setAttribute("class", "active"); // Dom intereable object to access it's property
+                    //console.log(`${hatArr[i]["color"].toLowerCase()}`)
                 }
                 //allArrHats[i].target.className.setAttribute("class", )
                 let val = e.target.textContent.toLowerCase();

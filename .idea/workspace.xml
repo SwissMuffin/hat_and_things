@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Trying to figure out the selection component.">
+    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Trying to figure out the selection component.UPdates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
@@ -129,7 +129,7 @@
       <workItem from="1609155917865" duration="1960000" />
       <workItem from="1609163609856" duration="5056000" />
       <workItem from="1609171274126" duration="559000" />
-      <workItem from="1609176575229" duration="2162000" />
+      <workItem from="1609176575229" duration="3550000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609170240676</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Trying to figure out the selection component.UPdates">
+      <created>1609178945404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609178945404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +229,7 @@
     <MESSAGE value="I have ginven up on making the dinamic array so I am moving on." />
     <MESSAGE value="Project has been cleaned and simplified." />
     <MESSAGE value="Trying to figure out the selection component." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to figure out the selection component." />
+    <MESSAGE value="Trying to figure out the selection component.UPdates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to figure out the selection component.UPdates" />
   </component>
 </project>
