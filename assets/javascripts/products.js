@@ -22,7 +22,7 @@ function Hat(name, price, color, imageHref) {
 
 /* --------------------------------------------TASK 03-----------------------------------------------------*/
 
-const hatArray = [
+/*const hatArray = [
     product = new Hat("Baseball cap","11.99", "red", "whatever"),
     product = new Hat("Baseball cap", "11.99", "blue", "whatever" ),
     product = new Hat("Baseball cap", "11.99", "yellow", "whatever"),
@@ -37,11 +37,11 @@ const hatArray = [
     product = new Hat("Trilby", "10.99", "yellow", "whatever"),
     product = new Hat("Trilby", "10.99", "blue", "whatever"),
     product = new Hat("Trilby", "10.99", "blue", "whatever")
-];
+];*/
 
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
 
-/*const allHats = document.querySelectorAll(".container");
+const allHats = document.querySelectorAll(".container");
 const allDomHats = allHats[2].children[0].children; // It loops from this!
 
 const allArrHats = [];
@@ -53,7 +53,7 @@ const hatArr = [];
        const valImageHref = allDomHats[i].children[0].children[1].src;
        hatArr[i] = new Hat(`${valName}`, `${valPrice}`, `${valColor}`); // each iteration creates a new object according to the hat Prototype.
        allArrHats.push(hatArr[i]); //pushing elements from the loop to populate new array.
-    }*/
+    }
 
     function displayHat (aHat) {
 
@@ -111,18 +111,10 @@ function highlightSelectedFilter() {
         // activates the selection on button tha has been clicked!
         activeFilter[i].addEventListener("click", activateFilter);
         function activateFilter(e) {
-            activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
             e.preventDefault();
-            for (i = 0 ; i < hatArray.length; i++) {
-                switch (e.target.textContent.toLowerCase()){
-                    case "red":
-                        console.log("RED");
-                        break;
-                    case "blue":
-                        console.log("BLUE");
-                        break;
-                }
-            }
+            activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
+            console.log (allArrHats[1]);
+            //allArrHats[i].target.className.setAttribute("class", acessor)
             let val = e.target.textContent.toLowerCase();
             //console.log(val);
         }
