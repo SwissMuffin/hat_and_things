@@ -110,23 +110,27 @@ function highlightSelectedFilter() {
         activeFilter[i].classList.remove("active");
         // activates the selection on button tha has been clicked!
         activeFilter[i].addEventListener("click", activateFilter);
+
         function activateFilter(e) {
             e.preventDefault();
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
-            console.log (allArrHats[1]);
-            //allArrHats[i].target.className.setAttribute("class", acessor)
-            let val = e.target.textContent.toLowerCase();
-            //console.log(val);
+            for (let i = 0; i < allArrHats.length; i++) {
+                if (allArrHats[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
+                    allArrHats[i].setAttribute("class", "active");
+                }
+                //allArrHats[i].target.className.setAttribute("class", )
+                let val = e.target.textContent.toLowerCase();
+                //console.log(val);
+            }
         }
     }
-}
 
+}
  const btnRed = document.querySelector(".btn-group").children[0];
     btnRed.addEventListener("click", highlightSelectedFilter, false);
 
  const btnBlue = document.querySelector(".btn-group").children[1];
     btnBlue.addEventListener("click", highlightSelectedFilter, false);
-    
 
  const btnGreen = document.querySelector(".btn-group").children[2];
     btnGreen.addEventListener("click", highlightSelectedFilter, false);
