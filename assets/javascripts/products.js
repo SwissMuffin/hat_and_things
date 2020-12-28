@@ -113,7 +113,7 @@ function highlightSelectedFilter() {
             const colorArr = [];
             for (let i = 0; i < allHats.length; i++) {
                 if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all hat color buttons match
-                    allHats[i].setAttribute("class", "active"); // Dom intereable object to access it's property
+                    allHats[i].setAttribute("class", "accessory col-sm-4" + ` ${hatArr[i]["color"].toLowerCase()}`); // Dom intereable object to access it's property
                     //console.log(`${hatArr[i]["color"].toLowerCase()}`)
                 }
                 //allArrHats[i].target.className.setAttribute("class", )
@@ -124,14 +124,23 @@ function highlightSelectedFilter() {
     }
 
 }
+
+function filterHatsByColor(){
+
+}
  const btnRed = document.querySelector(".btn-group").children[0];
     btnRed.addEventListener("click", highlightSelectedFilter, false);
+    btnRed.addEventListener("click", filterHatsByColor(), false);
 
  const btnBlue = document.querySelector(".btn-group").children[1];
     btnBlue.addEventListener("click", highlightSelectedFilter, false);
+    btnBlue.addEventListener("click", filterHatsByColor(), false);
 
  const btnGreen = document.querySelector(".btn-group").children[2];
     btnGreen.addEventListener("click", highlightSelectedFilter, false);
+    btnGreen.addEventListener("click", filterHatsByColor(), false);
 
  const btnYellow = document.querySelector(".btn-group").children[3];
     btnYellow.addEventListener("click", highlightSelectedFilter, false);
+    btnYellow.addEventListener("click", filterHatsByColor(), false);
+
