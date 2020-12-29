@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Trying to figure out the selection component.UPdated">
-      <change afterPath="$PROJECT_DIR$/02. Error handling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02. Project outline and objectives.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03. Scheduling things.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/14. JSON &amp; JSON methods.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15. Making API requests.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16. Local storage and session storage.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/19. Introduction to jQuery.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20. About JS frameworks.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/21. Event Bubbling and Event Delegation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/21. The state of the JS eco-system and a word of caution.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/22. Server side JavaScript.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/function selectColorValues() {    const hatTextValues = document.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/if (hatByColorArr[i].md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
@@ -48,7 +35,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -149,6 +136,7 @@
       <workItem from="1609176575229" duration="3742000" />
       <workItem from="1609188177109" duration="4790000" />
       <workItem from="1609243090600" duration="13268000" />
+      <workItem from="1609275036134" duration="4464000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>

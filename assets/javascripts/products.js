@@ -121,14 +121,14 @@ function highlightSelectedFilter() {
 }
 
 function filterHatsByColor(e){
+
     for ( let i = 0; i < allHats.length; i++) {
         allHats[i].style.display = "none";
+        if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
+            allHats[i].style.display = "block";
+        }
     }
-    //e.preventDefault();
-    //console.log(e.target.textContent);
-
 }
-
 
 
 //filterHatsByColor(highlightSelectedFilter());
