@@ -101,7 +101,6 @@ const hatArr = [];
 
 function highlightSelectedFilter() {
     const activeFilter = document.querySelector(".btn-group").children;
-    //const arrSelection = [];
     for (let i = 0; i < activeFilter.length; i++) {
         activeFilter[i].classList.remove("active");
         // activates the selection on button tha has been clicked!
@@ -110,7 +109,6 @@ function highlightSelectedFilter() {
         function activateFilter(e) {
             e.preventDefault();
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
-            const colorArr = [];
             for (let i = 0; i < allHats.length; i++) {
                 if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all hat color buttons match
                     allHats[i].setAttribute("class", "accessory col-sm-4" + ` ${hatArr[i]["color"].toLowerCase()}`); // Dom intereable object to access it's property
@@ -122,25 +120,31 @@ function highlightSelectedFilter() {
 
 }
 
-function filterHatsByColor(){
-    for (let i = 0; i < allHats.length; i++) {
+function filterHatsByColor(e){
+    for ( let i = 0; i < allHats.length; i++) {
         allHats[i].style.display = "none";
-
     }
+    //e.preventDefault();
+    //console.log(e.target.textContent);
+
 }
+
+
+
+//filterHatsByColor(highlightSelectedFilter());
  const btnRed = document.querySelector(".btn-group").children[0];
     btnRed.addEventListener("click", highlightSelectedFilter, false);
     btnRed.addEventListener("click", filterHatsByColor, false);
 
  const btnBlue = document.querySelector(".btn-group").children[1];
     btnBlue.addEventListener("click", highlightSelectedFilter, false);
-    btnBlue.addEventListener("click", filterHatsByColor(), false);
+    btnBlue.addEventListener("click", filterHatsByColor, false);
 
  const btnGreen = document.querySelector(".btn-group").children[2];
     btnGreen.addEventListener("click", highlightSelectedFilter, false);
-    btnGreen.addEventListener("click", filterHatsByColor(), false);
+    btnGreen.addEventListener("click", filterHatsByColor, false);
 
  const btnYellow = document.querySelector(".btn-group").children[3];
     btnYellow.addEventListener("click", highlightSelectedFilter, false);
-    btnYellow.addEventListener("click", filterHatsByColor(), false);
+    btnYellow.addEventListener("click", filterHatsByColor, false);
 

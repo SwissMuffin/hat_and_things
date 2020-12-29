@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Trying to figure out the selection component.UPdated">
+      <change afterPath="$PROJECT_DIR$/02. Error handling.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02. Project outline and objectives.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03. Scheduling things.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14. JSON &amp; JSON methods.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15. Making API requests.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16. Local storage and session storage.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/19. Introduction to jQuery.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20. About JS frameworks.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21. Event Bubbling and Event Delegation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/21. The state of the JS eco-system and a word of caution.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/22. Server side JavaScript.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/function selectColorValues() {    const hatTextValues = document.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/if (hatByColorArr[i].md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
@@ -20,11 +33,15 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1imRJd801MSy7RRygr5Nb6ActNQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/prototypes-and-this" />
@@ -131,6 +148,7 @@
       <workItem from="1609171274126" duration="559000" />
       <workItem from="1609176575229" duration="3742000" />
       <workItem from="1609188177109" duration="4790000" />
+      <workItem from="1609243090600" duration="13268000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
@@ -235,6 +253,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Laptop version is now synched with the PC one." />
     <MESSAGE value="variables specificity of the function to represent all the hats on static page was fixed (children not childnodes)" />
     <MESSAGE value="A new array was created by populating from a loop specific target elements from the DOM to dinamically represent the array." />
