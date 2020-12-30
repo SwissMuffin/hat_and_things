@@ -110,7 +110,7 @@ function highlightSelectedFilter() {
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
             for (let i = 0; i < allHats.length; i++) {
                 if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all hat color buttons match
-                    allHats[i].setAttribute("class", "accessory col-sm-4" + ` ${hatArr[i]["color"].toLowerCase()}`); // Dom intereable object to access it's property
+                    allHats[i].setAttribute("class", "accessory col-sm-4" + ` ${hatArr[i]["color"].toLowerCase()}`);
                 }
             }
         }
