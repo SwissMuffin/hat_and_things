@@ -103,7 +103,6 @@ function highlightSelectedFilter() {
     const activeFilter = document.querySelector(".btn-group").children;
     for (let i = 0; i < activeFilter.length; i++) {
         activeFilter[i].classList.remove("active");
-        // activates the selection on button tha has been clicked!
         activeFilter[i].addEventListener("click", activateFilter);
 
         function activateFilter(e) {
@@ -134,8 +133,6 @@ function filterHatsByColor(e) {
         }
     }
 }
-
-//filterHatsByColor(highlightSelectedFilter());
  const btnRed = document.querySelector(".btn-group").children[0];
     btnRed.addEventListener("click", highlightSelectedFilter, false);
     btnRed.addEventListener("click", filterHatsByColor, false);
