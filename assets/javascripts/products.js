@@ -13,7 +13,7 @@ hat.toString = function () {
 
 /*------------------------------------------TASK 02--------------------------------------------------------*/
 
-function Hat(name, price, color, imageHref) {
+function Accessory(name, price, color, imageHref) {
     this.name = name;
     this.price = price;
     this.color = color;
@@ -23,20 +23,20 @@ function Hat(name, price, color, imageHref) {
 /* --------------------------------------------TASK 03-----------------------------------------------------*/
 
 /*const hatArray = [
-    product = new Hat("Baseball cap","11.99", "red", "whatever"),
-    product = new Hat("Baseball cap", "11.99", "blue", "whatever" ),
-    product = new Hat("Baseball cap", "11.99", "yellow", "whatever"),
-    product = new Hat("Baseball cap", "11.99", "green", "whatever"),
-    product = new Hat("Beanie", "17.99", "red", "whatever"),
-    product = new Hat("Beanie", "17.99", "blue", "whatever"),
-    product = new Hat("Beanie", "17.99", "green", "whatever"),
-    product = new Hat("Straw hat", "10.99", "green", "whatever"),
-    product = new Hat("Straw hat", "10.99", "yellow", "whatever"),
-    product = new Hat("Trilby", "10.99", "red", "whatever"),
-    product = new Hat("Trilby", "10.99", "blue", "whatever"),
-    product = new Hat("Trilby", "10.99", "yellow", "whatever"),
-    product = new Hat("Trilby", "10.99", "blue", "whatever"),
-    product = new Hat("Trilby", "10.99", "blue", "whatever")
+    product = new Accessory("Baseball cap","11.99", "red", "whatever"),
+    product = new Accessory("Baseball cap", "11.99", "blue", "whatever" ),
+    product = new Accessory("Baseball cap", "11.99", "yellow", "whatever"),
+    product = new Accessory("Baseball cap", "11.99", "green", "whatever"),
+    product = new Accessory("Beanie", "17.99", "red", "whatever"),
+    product = new Accessory("Beanie", "17.99", "blue", "whatever"),
+    product = new Accessory("Beanie", "17.99", "green", "whatever"),
+    product = new Accessory("Straw hat", "10.99", "green", "whatever"),
+    product = new Accessory("Straw hat", "10.99", "yellow", "whatever"),
+    product = new Accessory("Trilby", "10.99", "red", "whatever"),
+    product = new Accessory("Trilby", "10.99", "blue", "whatever"),
+    product = new Accessory("Trilby", "10.99", "yellow", "whatever"),
+    product = new Accessory("Trilby", "10.99", "blue", "whatever"),
+    product = new Accessory("Trilby", "10.99", "blue", "whatever")
 ];*/
 
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
@@ -48,7 +48,7 @@ const hatArr = [];
        const valPrice = allHats[i].children[0].children[0].textContent;
        const valColor = allHats[i].children[0].children[2].children[1].children[0].textContent;
        const valImageHref = allHats[i].children[0].children[1].src;
-       hatArr.push(new Hat(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the hat Prototype.
+       hatArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the hat Prototype.
     }
 
     function displayHat (aHat) {
@@ -153,4 +153,10 @@ function filterHatsByColor(e) {
     btnAll.addEventListener("click", highlightSelectedFilter, false);
     btnAll.addEventListener("click", filterHatsByColor, false);
 
+function loadRemoteAccessories(e) {
 
+    //let request = e.target.textContent.toLowerCase()
+
+    const request = new XMLHttpRequest();
+
+}
