@@ -120,16 +120,21 @@ function highlightSelectedFilter() {
 
 }
 
-function filterHatsByColor(e){
+function filterHatsByColor(e) {
 
-    for ( let i = 0; i < allHats.length; i++) {
+    for (let i = 0; i < allHats.length; i++) {
         allHats[i].style.display = "none";
         if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
             allHats[i].style.display = "block";
         }
     }
-}
 
+    for (let i = 0; i < allHats.length; i++) {
+        if (e.target.textContent.toLowerCase() === "all") {
+            allHats[i].style.display = "block";
+        }
+    }
+}
 
 //filterHatsByColor(highlightSelectedFilter());
  const btnRed = document.querySelector(".btn-group").children[0];
@@ -147,4 +152,9 @@ function filterHatsByColor(e){
  const btnYellow = document.querySelector(".btn-group").children[3];
     btnYellow.addEventListener("click", highlightSelectedFilter, false);
     btnYellow.addEventListener("click", filterHatsByColor, false);
+
+ const btnAll = document.querySelector(".btn-group").children[4];
+    btnAll.addEventListener("click", highlightSelectedFilter, false);
+    btnAll.addEventListener("click", filterHatsByColor, false);
+
 
