@@ -48,7 +48,7 @@ const hatArr = [];
        const valPrice = allHats[i].children[0].children[0].textContent;
        const valColor = allHats[i].children[0].children[2].children[1].children[0].textContent;
        const valImageHref = allHats[i].children[0].children[1].src;
-       hatArr.push(new Hat(`${valName}`, `${valPrice}`, `${valColor}`));// each iteration creates a new object according to the hat Prototype.
+       hatArr.push(new Hat(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the hat Prototype.
     }
 
     function displayHat (aHat) {
@@ -113,7 +113,6 @@ function highlightSelectedFilter() {
                 if (hatArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all hat color buttons match
                     allHats[i].setAttribute("class", "accessory col-sm-4" + ` ${hatArr[i]["color"].toLowerCase()}`); // Dom intereable object to access it's property
                 }
-                let val = e.target.textContent.toLowerCase();
             }
         }
     }

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Trying to figure out the selection component.UPdated">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Filter by color Done!">
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +138,7 @@
       <workItem from="1609188177109" duration="4790000" />
       <workItem from="1609243090600" duration="13268000" />
       <workItem from="1609275036134" duration="4464000" />
-      <workItem from="1609331578531" duration="1369000" />
+      <workItem from="1609331578531" duration="2276000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609190707557</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Filter by color Done!">
+      <created>1609333216898</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609333216898</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +262,7 @@
     <MESSAGE value="Trying to figure out the selection component." />
     <MESSAGE value="Trying to figure out the selection component.UPdates" />
     <MESSAGE value="Trying to figure out the selection component.UPdated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to figure out the selection component.UPdated" />
+    <MESSAGE value="Filter by color Done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter by color Done!" />
   </component>
 </project>
