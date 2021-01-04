@@ -178,7 +178,15 @@ function loadRemoteAccessories(e) {
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false );
             socksRequest.onload = () => {
-                console.log(socksRequest.responseText);
+                //console.log(socksRequest.responseText);
+                let socksArray = JSON.parse(socksRequest.responseText);
+                for (let i = 0; i < socksArray.length; i++) {
+                   if (e.target.textContent.toLowerCase() === socksArray[i]["name"].toLowerCase()) {
+                       console.log("I am here");
+                   }
+
+                }
+
             }
             socksRequest.send();
             //
