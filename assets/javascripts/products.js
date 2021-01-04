@@ -165,15 +165,37 @@ const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
 
 function loadRemoteAccessories(e) {
     switch (e.target.textContent.toLocaleLowerCase()) {
+
         case "hats":
-            console.log("Hats");
+
+            let hatRequest = new XMLHttpRequest();
+            hatRequest.open('GET', '' )
+            //console.log(e.target.textContent);
             break;
+
         case "socks":
-            console.log("Socks");
+
+            let socksRequest = new XMLHttpRequest();
+            socksRequest.open('GET', './socks.json', false );
+            socksRequest.onload = () => {
+                console.log(socksRequest.responseText);
+            }
+            socksRequest.send();
+            //
+            // console.log("Socks");
             break;
+
         case "sunglasses":
-            console.log("Sunglasses");
+
+            let sunglassesRequest = new XMLHttpRequest();
+            sunglassesRequest.open('GET', './sunglasses.json', false );
+            sunglassesRequest.onload = () => {
+                console.log(sunglassesRequest.responseText)
+            }
+            sunglassesRequest.send();
+            // console.log("Sunglasses");
             break;
+
     }
 }
 
