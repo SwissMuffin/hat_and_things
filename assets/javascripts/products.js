@@ -42,6 +42,7 @@ function Accessory(name, price, color, imageHref) {
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
 
 const allHats = document.querySelectorAll(".accessory");
+
 const hatArr = [];
    for (let i = 0; i < allHats.length; i++) {
        const valName = allHats[i].children[0].children[2].children[0].textContent;
@@ -153,10 +154,26 @@ function filterHatsByColor(e) {
     btnAll.addEventListener("click", highlightSelectedFilter, false);
     btnAll.addEventListener("click", filterHatsByColor, false);
 
+/* --------------------- Btn Hats, Socks, Sunglasses--------------------------------- */
+
+const btnNavHat = document.querySelector(".navbar-nav").children[0];
+    btnNavHat.addEventListener("click", loadRemoteAccessories, false);
+const btnNavSocks = document.querySelector(".navbar-nav").children[1];
+    btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
+const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
+    btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
+
 function loadRemoteAccessories(e) {
-
-    //let request = e.target.textContent.toLowerCase()
-
-    const request = new XMLHttpRequest();
-
+    switch (e.target.textContent.toLocaleLowerCase()) {
+        case "hats":
+            console.log("Hats");
+            break;
+        case "socks":
+            console.log("Socks");
+            break;
+        case "sunglasses":
+            console.log("Sunglasses");
+            break;
+    }
 }
+
