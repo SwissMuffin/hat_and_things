@@ -162,6 +162,8 @@ const btnNavSocks = document.querySelector(".navbar-nav").children[1];
     btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
 const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
     btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
+const btnNavGloves = document.querySelector(".navbar-nav").children[3];
+btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
 function loadRemoteAccessories(e) {
     //console.log(accessoryArr);
@@ -205,6 +207,20 @@ function loadRemoteAccessories(e) {
                 }
             }
             sunglassesRequest.send();
+
+            break;
+
+        case "gloves":
+
+            let glovesRequest = new XMLHttpRequest();
+            glovesRequest.open('GET', './gloves.json', false );
+            glovesRequest.onload = () => {
+                let glovesSet = JSON.parse(glovesRequest.responseText);
+                for (let i = 0; i < glovesSet.length; i++){
+                    displayAccessory(glovesSet[i]);
+                }
+            }
+            glovesRequest.send();
 
             break;
 
