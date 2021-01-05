@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="display accessories has been modified do accomodate changes dinamically.">
+    <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="display accessories has been modified do accomodate changes dinamically. (updated)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02. Project outline and objectives.md" beforeDir="false" afterPath="$PROJECT_DIR$/02. Project outline and objectives.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +157,8 @@
       <workItem from="1609771702681" duration="3036000" />
       <workItem from="1609781023539" duration="2154000" />
       <workItem from="1609792977880" duration="3629000" />
-      <workItem from="1609847020074" duration="5871000" />
+      <workItem from="1609847020074" duration="6111000" />
+      <workItem from="1609863974318" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
@@ -290,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609852670222</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="display accessories has been modified do accomodate changes dinamically. (updated)">
+      <created>1609853198482</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609853198482</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +337,7 @@
     <MESSAGE value="loadRemoteAccessories buttons and logic structures layout. Updated" />
     <MESSAGE value="display accessories has been modified do accomodate changes dinamically" />
     <MESSAGE value="display accessories has been modified do accomodate changes dinamically." />
-    <option name="LAST_COMMIT_MESSAGE" value="display accessories has been modified do accomodate changes dinamically." />
+    <MESSAGE value="display accessories has been modified do accomodate changes dinamically. (updated)" />
+    <option name="LAST_COMMIT_MESSAGE" value="display accessories has been modified do accomodate changes dinamically. (updated)" />
   </component>
 </project>

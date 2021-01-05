@@ -169,21 +169,16 @@ function loadRemoteAccessories(e) {
         allaccessorys[i].style.display = "none";
     }
 
-
-
     switch (e.target.textContent.toLocaleLowerCase()) {
 
-        /*case "hats":
+        case "hats":
 
-            let accessoryRequest = new XMLHttpRequest();
-            accessoryRequest.open('GET', '' )
-            accessoryRequest.onload = () => {
-                for (let i = 0; i < accessoryArr.length; i++) {
-                    console.log(accessoryArr);
-                    //displayAccessory(accessoryArr[i]);
-                }
+            for (let i = 0; i < accessoryArr.length; i++) {
+
+                    displayAccessory(accessoryArr[i]);
             }
-            break;*/
+
+            break;
 
         case "socks":
 
@@ -194,8 +189,6 @@ function loadRemoteAccessories(e) {
                 for ( let i = 0; i < socksArray.length; i++) {
                     displayAccessory(socksArray[i]);
                 }
-
-
 
             }
             socksRequest.send();
