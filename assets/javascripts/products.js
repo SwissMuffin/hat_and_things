@@ -156,8 +156,8 @@ function filteraccessorysByColor(e) {
 
 /* --------------------- Btn accessorys, Socks, Sunglasses--------------------------------- */
 
-const btnNavaccessory = document.querySelector(".navbar-nav").children[0];
-    btnNavaccessory.addEventListener("click", loadRemoteAccessories, false);
+const btnNavhat = document.querySelector(".navbar-nav").children[0];
+    btnNavhat.addEventListener("click", loadRemoteAccessories, false);
 const btnNavSocks = document.querySelector(".navbar-nav").children[1];
     btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
 const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
@@ -173,12 +173,17 @@ function loadRemoteAccessories(e) {
 
     switch (e.target.textContent.toLocaleLowerCase()) {
 
-        case "accessorys":
+        /*case "hats":
 
             let accessoryRequest = new XMLHttpRequest();
             accessoryRequest.open('GET', '' )
-            //console.log(e.target.textContent);
-            break;
+            accessoryRequest.onload = () => {
+                for (let i = 0; i < accessoryArr.length; i++) {
+                    console.log(accessoryArr);
+                    //displayAccessory(accessoryArr[i]);
+                }
+            }
+            break;*/
 
         case "socks":
 
