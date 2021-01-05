@@ -166,7 +166,7 @@ const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
 function loadRemoteAccessories(e) {
-    //console.log(accessoryArr);
+
     for ( let i = 0; i < allaccessorys.length; i++) {
         allaccessorys[i].style.display = "none";
     }
