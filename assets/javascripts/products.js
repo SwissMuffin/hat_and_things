@@ -172,10 +172,10 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 function loadRemoteAccessories(e) {
 
  function clearAll() {
-        const productAll = document.getElementById("products");
-        for  (let i=0; i < allAccessories.length; i++){
-            productAll.removeChild(document.querySelector(".accessory"));
-
+        const productParent = document.getElementById("products");
+        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
+        for  (let i=0; i < productChild.length; i++){
+            productParent.removeChild(document.querySelector(".accessory"));
         }
     }
 
@@ -190,11 +190,11 @@ function loadRemoteAccessories(e) {
             break;
 
         case "socks":
-
+            clearAll();
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false );
             socksRequest.onload = () => {
-                clearAll();
+
                 let socksArray = JSON.parse(socksRequest.responseText);
                 for ( let i = 0; i < socksArray.length; i++) {
                     displayAccessory(socksArray[i]);
@@ -205,11 +205,10 @@ function loadRemoteAccessories(e) {
             break;
 
         case "sunglasses":
-
+            clearAll();
             let sunglassesRequest = new XMLHttpRequest();
             sunglassesRequest.open('GET', './sunglasses.json', false );
             sunglassesRequest.onload = () => {
-                clearAll();
                 let sunglassesSet = JSON.parse(sunglassesRequest.responseText);
                 for (let i = 0; i < sunglassesSet.length; i++){
                     displayAccessory(sunglassesSet[i]);
@@ -220,7 +219,7 @@ function loadRemoteAccessories(e) {
             break;
 
         case "gloves":
-
+            clearAll();
             let glovesRequest = new XMLHttpRequest();
             glovesRequest.open('GET', './gloves.json', false );
             glovesRequest.onload = () => {
@@ -232,8 +231,9 @@ function loadRemoteAccessories(e) {
             }
 
             glovesRequest.send();
-            clearAll();
+
             break;
+
 
     }
 }
