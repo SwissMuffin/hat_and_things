@@ -22,7 +22,7 @@ function Accessory(name, price, color, imageHref) {
 
 /* --------------------------------------------TASK 03-----------------------------------------------------*/
 
-/*const accessoryArray = [
+/*const allAccessories = [
     product = new Accessory("Baseball cap","11.99", "red", "waccessoryever"),
     product = new Accessory("Baseball cap", "11.99", "blue", "waccessoryever" ),
     product = new Accessory("Baseball cap", "11.99", "yellow", "waccessoryever"),
@@ -41,14 +41,14 @@ function Accessory(name, price, color, imageHref) {
 
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
 
-const allaccessorys = document.querySelectorAll(".accessory");
+const allAccessories = document.querySelectorAll(".accessory");
 
 const accessoryArr = [];
-   for (let i = 0; i < allaccessorys.length; i++) {
-       const valName = allaccessorys[i].children[0].children[2].children[0].textContent;
-       const valPrice = allaccessorys[i].children[0].children[0].textContent;
-       const valColor = allaccessorys[i].children[0].children[2].children[1].children[0].textContent;
-       const valImageHref = allaccessorys[i].children[0].children[1].src;
+   for (let i = 0; i < allAccessories.length; i++) {
+       const valName = allAccessories[i].children[0].children[2].children[0].textContent;
+       const valPrice = allAccessories[i].children[0].children[0].textContent;
+       const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
+       const valImageHref = allAccessories[i].children[0].children[1].src;
        accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
     }
 
@@ -109,9 +109,9 @@ function highlightSelectedFilter() {
         function activateFilter(e) {
             e.preventDefault();
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
-            for (let i = 0; i < allaccessorys.length; i++) {
+            for (let i = 0; i < allAccessories.length; i++) {
                 if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all accessory color buttons match
-                    allaccessorys[i].setAttribute("class", "accessory col-sm-4" + ` ${accessoryArr[i]["color"].toLowerCase()}`);
+                    allAccessories[i].setAttribute("class", "accessory col-sm-4" + ` ${accessoryArr[i]["color"].toLowerCase()}`);
                 }
             }
         }
@@ -121,16 +121,16 @@ function highlightSelectedFilter() {
 
 function filteraccessorysByColor(e) {
 
-    for (let i = 0; i < allaccessorys.length; i++) {
-        allaccessorys[i].style.display = "none";
+    for (let i = 0; i < allAccessories.length; i++) {
+        allAccessories[i].style.display = "none";
         if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
-            allaccessorys[i].style.display = "block";
+            allAccessories[i].style.display = "block";
         }
     }
 
-    for (let i = 0; i < allaccessorys.length; i++) {
+    for (let i = 0; i < allAccessories.length; i++) {
         if (e.target.textContent.toLowerCase() === "all") {
-            allaccessorys[i].style.display = "block";
+            allAccessories[i].style.display = "block";
         }
     }
 }
@@ -158,26 +158,33 @@ function filteraccessorysByColor(e) {
 
 const btnNavhat = document.querySelector(".navbar-nav").children[0];
     btnNavhat.addEventListener("click", loadRemoteAccessories, false);
+
 const btnNavSocks = document.querySelector(".navbar-nav").children[1];
     btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
+
 const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
     btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
 const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
+
+
 function loadRemoteAccessories(e) {
 
-    for ( let i = 0; i < allaccessorys.length; i++) {
-        allaccessorys[i].style.display = "none";
+ function clearAll() {
+        const productAll = document.getElementById("products");
+        for  (let i=0; i < allAccessories.length; i++){
+            productAll.removeChild(document.querySelector(".accessory"));
+
+        }
     }
 
     switch (e.target.textContent.toLocaleLowerCase()) {
 
         case "hats":
-
+            clearAll();
             for (let i = 0; i < accessoryArr.length; i++) {
-
-                    displayAccessory(accessoryArr[i]);
+                displayAccessory(accessoryArr[i]);
             }
 
             break;
@@ -187,6 +194,7 @@ function loadRemoteAccessories(e) {
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false );
             socksRequest.onload = () => {
+                clearAll();
                 let socksArray = JSON.parse(socksRequest.responseText);
                 for ( let i = 0; i < socksArray.length; i++) {
                     displayAccessory(socksArray[i]);
@@ -201,6 +209,7 @@ function loadRemoteAccessories(e) {
             let sunglassesRequest = new XMLHttpRequest();
             sunglassesRequest.open('GET', './sunglasses.json', false );
             sunglassesRequest.onload = () => {
+                clearAll();
                 let sunglassesSet = JSON.parse(sunglassesRequest.responseText);
                 for (let i = 0; i < sunglassesSet.length; i++){
                     displayAccessory(sunglassesSet[i]);
@@ -217,11 +226,13 @@ function loadRemoteAccessories(e) {
             glovesRequest.onload = () => {
                 let glovesSet = JSON.parse(glovesRequest.responseText);
                 for (let i = 0; i < glovesSet.length; i++){
+
                     displayAccessory(glovesSet[i]);
                 }
             }
-            glovesRequest.send();
 
+            glovesRequest.send();
+            clearAll();
             break;
 
     }
