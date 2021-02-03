@@ -52,7 +52,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -174,7 +174,18 @@
       <workItem from="1611862766921" duration="5512000" />
       <workItem from="1611910597567" duration="1354000" />
       <workItem from="1611921258830" duration="4871000" />
-      <workItem from="1611927215078" duration="330000" />
+      <workItem from="1611927215078" duration="935000" />
+      <workItem from="1611929518403" duration="25000" />
+      <workItem from="1611929897194" duration="53000" />
+      <workItem from="1611935884250" duration="5398000" />
+      <workItem from="1612096421232" duration="3567000" />
+      <workItem from="1612189034849" duration="9945000" />
+      <workItem from="1612202766558" duration="274000" />
+      <workItem from="1612210415407" duration="1305000" />
+      <workItem from="1612260412477" duration="11000" />
+      <workItem from="1612264276256" duration="8899000" />
+      <workItem from="1612278882406" duration="1638000" />
+      <workItem from="1612369256708" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>

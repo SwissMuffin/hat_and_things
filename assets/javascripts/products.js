@@ -52,6 +52,31 @@ const accessoryArr = [];
        accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
     }
 
+
+   function allProd (itemProperty) {
+       const allAccessoriesElements = document.querySelectorAll(".accessory");
+       let allAccessoryArray = [];
+
+       allAccessoriesElements.forEach((element) => {
+           const valName = element.children[0].children[2].children[0].textContent;
+           const valPrice = element.children[0].children[0].textContent;
+           const valColor = element.children[0].children[2].children[1].children[0].textContent;
+           const valImageHref = element.children[0].children[1].src;
+           allAccessoryArray.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));
+       })
+
+       if (!itemProperty) {
+           allAccessoryArray.forEach((element) => {
+               console.log(element);
+           }) ;
+
+       }else {
+           allAccessoryArray.forEach((element) => {
+               console.log(element[itemProperty].toLowerCase());
+           }) ;
+       }
+   }
+
     function displayAccessory (anAccessory) {
 
         const accessoryPrice = document.createElement("div");
@@ -107,33 +132,35 @@ function highlightSelectedFilter() {
         activeFilter[i].addEventListener("click", activateFilter);
 
         function activateFilter(e) {
+
             e.preventDefault();
             activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
             for (let i = 0; i < allAccessories.length; i++) {
-                if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) { //all accessory color buttons match
+                if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
                     allAccessories[i].setAttribute("class", "accessory col-sm-4" + ` ${accessoryArr[i]["color"].toLowerCase()}`);
                 }
             }
         }
     }
-
 }
+
 
 function filteraccessorysByColor(e) {
 
-    for (let i = 0; i < allAccessories.length; i++) {
-        allAccessories[i].style.display = "none";
-        if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
-            allAccessories[i].style.display = "block";
-        }
-    }
+    const allCurrentProjects = document.querySelectorAll(".accessory");
+    allCurrentProjects.forEach((element) => {
+        element.style.display = "none";
+        const valColor = element.children[0].children[2].children[1].children[0].textContent;
 
-    for (let i = 0; i < allAccessories.length; i++) {
-        if (e.target.textContent.toLowerCase() === "all") {
-            allAccessories[i].style.display = "block";
+        if (valColor === e.target.textContent.toLowerCase()) {
+            element.style.display = "block";
+        } else if (e.target.textContent.toLowerCase() === "all") {
+            element.style.display = "block";
         }
-    }
+    })
+
 }
+
  const btnRed = document.querySelector(".btn-group").children[0];
     btnRed.addEventListener("click", highlightSelectedFilter, false);
     btnRed.addEventListener("click", filteraccessorysByColor, false);
@@ -169,15 +196,16 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
 
 
+
 function loadRemoteAccessories(e) {
 
- function clearAll() {
-        const productParent = document.getElementById("products");
-        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
-        for  (let i=0; i < productChild.length; i++){
-            productParent.removeChild(document.querySelector(".accessory"));
-        }
-    }
+     function clearAll() {
+         const productParent = document.getElementById("products");
+         const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
+         productChild.forEach(() => {
+             productParent.removeChild(document.querySelector(".accessory"));
+         })
+     }
 
     switch (e.target.textContent.toLocaleLowerCase()) {
 
@@ -186,7 +214,6 @@ function loadRemoteAccessories(e) {
             for (let i = 0; i < accessoryArr.length; i++) {
                 displayAccessory(accessoryArr[i]);
             }
-
             break;
 
         case "socks":
@@ -194,12 +221,10 @@ function loadRemoteAccessories(e) {
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false );
             socksRequest.onload = () => {
-
                 let socksArray = JSON.parse(socksRequest.responseText);
                 for ( let i = 0; i < socksArray.length; i++) {
                     displayAccessory(socksArray[i]);
                 }
-
             }
             socksRequest.send();
             break;
@@ -215,7 +240,6 @@ function loadRemoteAccessories(e) {
                 }
             }
             sunglassesRequest.send();
-
             break;
 
         case "gloves":
@@ -225,13 +249,10 @@ function loadRemoteAccessories(e) {
             glovesRequest.onload = () => {
                 let glovesSet = JSON.parse(glovesRequest.responseText);
                 for (let i = 0; i < glovesSet.length; i++){
-
                     displayAccessory(glovesSet[i]);
                 }
             }
-
             glovesRequest.send();
-
             break;
 
 
