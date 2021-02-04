@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02. Project outline and objectives.md" beforeDir="false" afterPath="$PROJECT_DIR$/02. Project outline and objectives.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +187,9 @@
       <workItem from="1612264276256" duration="8899000" />
       <workItem from="1612278882406" duration="1638000" />
       <workItem from="1612369256708" duration="2251000" />
-      <workItem from="1612445647124" duration="3224000" />
+      <workItem from="1612445647124" duration="7211000" />
+      <workItem from="1612453257797" duration="569000" />
+      <workItem from="1612456009298" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>

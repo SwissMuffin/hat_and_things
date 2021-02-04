@@ -114,7 +114,7 @@ function highlightSelectedFilter() {
 }
 
 
-function filteraccessorysByColor(e) {
+function filterAccessoryByColor(e) {
 
     const allCurrentProjects = document.querySelectorAll(".accessory");
     allCurrentProjects.forEach((element) => {
@@ -132,23 +132,23 @@ function filteraccessorysByColor(e) {
 
  const btnRed = document.querySelector(".btn-group").children[0];
     btnRed.addEventListener("click", highlightSelectedFilter, false);
-    btnRed.addEventListener("click", filteraccessorysByColor, false);
+    btnRed.addEventListener("click", filterAccessoryByColor, false);
 
  const btnBlue = document.querySelector(".btn-group").children[1];
     btnBlue.addEventListener("click", highlightSelectedFilter, false);
-    btnBlue.addEventListener("click", filteraccessorysByColor, false);
+    btnBlue.addEventListener("click", filterAccessoryByColor, false);
 
  const btnGreen = document.querySelector(".btn-group").children[2];
     btnGreen.addEventListener("click", highlightSelectedFilter, false);
-    btnGreen.addEventListener("click", filteraccessorysByColor, false);
+    btnGreen.addEventListener("click", filterAccessoryByColor, false);
 
  const btnYellow = document.querySelector(".btn-group").children[3];
     btnYellow.addEventListener("click", highlightSelectedFilter, false);
-    btnYellow.addEventListener("click", filteraccessorysByColor, false);
+    btnYellow.addEventListener("click", filterAccessoryByColor, false);
 
  const btnAll = document.querySelector(".btn-group").children[4];
     btnAll.addEventListener("click", highlightSelectedFilter, false);
-    btnAll.addEventListener("click", filteraccessorysByColor, false);
+    btnAll.addEventListener("click", filterAccessoryByColor, false);
 
 /* --------------------- Btn accessorys, Socks, Sunglasses--------------------------------- */
 
@@ -163,8 +163,6 @@ const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
 
 const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
-
-
 
 
 function loadRemoteAccessories(e) {
@@ -184,6 +182,7 @@ function loadRemoteAccessories(e) {
             for (let i = 0; i < accessoryArr.length; i++) {
                 displayAccessory(accessoryArr[i]);
             }
+
             break;
 
         case "socks":
@@ -225,7 +224,34 @@ function loadRemoteAccessories(e) {
             glovesRequest.send();
             break;
 
-
     }
 }
+
+function addToWishlist(accessory) {
+
+  /*  allAccessories.forEach((element) => {
+        element.addEventListener("click", btnAddClicked, false );
+        function btnAddClicked (e) {
+            e.target.style.color = "red";
+        }
+    })*/
+
+
+
+
+}
+
+addToWishlist()
+
+/*
+const btnTest = document.querySelectorAll(".card-body .btn");
+        btnTest.forEach((element) => {
+        element.addEventListener("click", btnAddClicked, false );
+        function btnAddClicked (e) {
+            console.log(`${e.target.textContent}`);
+        }
+    })
+*/
+
+
 
