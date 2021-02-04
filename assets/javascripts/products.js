@@ -100,7 +100,7 @@ const accessoryArr = [];
 
 /*-------------------------------------FILTERS BY COLOR----------------------------------------------------------------*/
 
-function highlightSelectedFilter() {
+/*function highlightSelectedFilter() {
     const activeFilter = document.querySelector(".btn-group").children;
     for (let i = 0; i < activeFilter.length; i++) {
         activeFilter[i].classList.remove("active");
@@ -117,6 +117,35 @@ function highlightSelectedFilter() {
             }
         }
     }
+}*/
+
+function highlightSelectedFilter() {
+    const activeFilter = document.querySelectorAll(".btn-group .btn");
+    activeFilter.forEach((element) => {
+        const valColor = element.textContent;
+        element.classList.remove("active");
+        element.onload = (e) => {
+            if (valColor === e.target.textContent.toLowerCase()) {
+            element.setAttribute("class", "btn btn-outline-secondary active");
+            }
+        }
+
+    })
+    /*for (let i = 0; i < activeFilter.length; i++) {
+        activeFilter[i].classList.remove("active");
+        activeFilter[i].addEventListener("click", activateFilter);
+
+        function activateFilter(e) {
+
+            e.preventDefault();
+            activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
+            for (let i = 0; i < allAccessories.length; i++) {
+                if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
+                    allAccessories[i].setAttribute("class", "accessory col-sm-4" + ` ${accessoryArr[i]["color"].toLowerCase()}`);
+                }
+            }
+        }
+    }*/
 }
 
 
@@ -166,6 +195,7 @@ const btnNavSocks = document.querySelector(".navbar-nav").children[1];
 
 const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
     btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
+
 const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
