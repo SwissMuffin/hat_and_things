@@ -100,25 +100,6 @@ const accessoryArr = [];
 
 /*-------------------------------------FILTERS BY COLOR----------------------------------------------------------------*/
 
-/*function highlightSelectedFilter() {
-    const activeFilter = document.querySelector(".btn-group").children;
-    for (let i = 0; i < activeFilter.length; i++) {
-        activeFilter[i].classList.remove("active");
-        activeFilter[i].addEventListener("click", activateFilter);
-
-        function activateFilter(e) {
-
-            e.preventDefault();
-            activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
-            for (let i = 0; i < allAccessories.length; i++) {
-                if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
-                    allAccessories[i].setAttribute("class", "accessory col-sm-4" + ` ${accessoryArr[i]["color"].toLowerCase()}`);
-                }
-            }
-        }
-    }
-}*/
-
 function highlightSelectedFilter() {
     const activeFilter = document.querySelectorAll(".btn-group .btn");
     activeFilter.forEach((element) => {
@@ -129,23 +110,7 @@ function highlightSelectedFilter() {
             element.setAttribute("class", "btn btn-outline-secondary active");
             }
         }
-
     })
-    /*for (let i = 0; i < activeFilter.length; i++) {
-        activeFilter[i].classList.remove("active");
-        activeFilter[i].addEventListener("click", activateFilter);
-
-        function activateFilter(e) {
-
-            e.preventDefault();
-            activeFilter[i].setAttribute("class", "btn btn-outline-secondary active");
-            for (let i = 0; i < allAccessories.length; i++) {
-                if (accessoryArr[i]["color"].toLowerCase() === e.target.textContent.toLowerCase()) {
-                    allAccessories[i].setAttribute("class", "accessory col-sm-4" + ` ${accessoryArr[i]["color"].toLowerCase()}`);
-                }
-            }
-        }
-    }*/
 }
 
 
