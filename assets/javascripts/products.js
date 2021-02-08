@@ -41,8 +41,7 @@ function Accessory(name, price, color, imageHref) {
 
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
 
-const allAccessories = document.querySelectorAll(".accessory");
-
+/*const allAccessories = document.querySelectorAll(".accessory");
 const accessoryArr = [];
    for (let i = 0; i < allAccessories.length; i++) {
        const valName = allAccessories[i].children[0].children[2].children[0].textContent;
@@ -50,7 +49,23 @@ const accessoryArr = [];
        const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
        const valImageHref = allAccessories[i].children[0].children[1].src;
        accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
+    }*/
+
+function allItems () {
+    const allAccessories = document.querySelectorAll(".accessory");
+    const accessoryArr = [];
+    for (let i = 0; i < allAccessories.length; i++) {
+       const valName = allAccessories[i].children[0].children[2].children[0].textContent;
+       const valPrice = allAccessories[i].children[0].children[0].textContent;
+       const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
+       const valImageHref = allAccessories[i].children[0].children[1].src;
+       accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
     }
+    //return accessoryArr;
+
+}
+
+
 
     function displayAccessory (anAccessory) {
 
@@ -165,33 +180,34 @@ const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
 
-function loadRemoteAccessories(e) {
+function loadRemoteAccessories(e, callback) {
 
-     function clearAll() {
-         const productParent = document.getElementById("products");
-         const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
-         productChild.forEach(() => {
-             productParent.removeChild(document.querySelector(".accessory"));
-         })
-     }
+    function clearAll() {
+        const productParent = document.getElementById("products");
+        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
+        productChild.forEach(() => {
+            productParent.removeChild(document.querySelector(".accessory"));
+        })
+    }
 
     switch (e.target.textContent.toLocaleLowerCase()) {
 
         case "hats":
             clearAll();
-            for (let i = 0; i < accessoryArr.length; i++) {
-                displayAccessory(accessoryArr[i]);
-            }
+
+          /*  accessoryArr.forEach((element) => {
+                displayAccessory(element);
+            })*/
 
             break;
 
         case "socks":
             clearAll();
             let socksRequest = new XMLHttpRequest();
-            socksRequest.open('GET', './socks.json', false );
+            socksRequest.open('GET', './socks.json', false);
             socksRequest.onload = () => {
                 let socksArray = JSON.parse(socksRequest.responseText);
-                for ( let i = 0; i < socksArray.length; i++) {
+                for (let i = 0; i < socksArray.length; i++) {
                     displayAccessory(socksArray[i]);
                 }
             }
@@ -201,10 +217,10 @@ function loadRemoteAccessories(e) {
         case "sunglasses":
             clearAll();
             let sunglassesRequest = new XMLHttpRequest();
-            sunglassesRequest.open('GET', './sunglasses.json', false );
+            sunglassesRequest.open('GET', './sunglasses.json', false);
             sunglassesRequest.onload = () => {
                 let sunglassesSet = JSON.parse(sunglassesRequest.responseText);
-                for (let i = 0; i < sunglassesSet.length; i++){
+                for (let i = 0; i < sunglassesSet.length; i++) {
                     displayAccessory(sunglassesSet[i]);
                 }
             }
@@ -214,10 +230,10 @@ function loadRemoteAccessories(e) {
         case "gloves":
             clearAll();
             let glovesRequest = new XMLHttpRequest();
-            glovesRequest.open('GET', './gloves.json', false );
+            glovesRequest.open('GET', './gloves.json', false);
             glovesRequest.onload = () => {
                 let glovesSet = JSON.parse(glovesRequest.responseText);
-                for (let i = 0; i < glovesSet.length; i++){
+                for (let i = 0; i < glovesSet.length; i++) {
                     displayAccessory(glovesSet[i]);
                 }
             }
@@ -225,33 +241,14 @@ function loadRemoteAccessories(e) {
             break;
 
     }
-}
-
-function addToWishlist(accessory) {
-
-  /*  allAccessories.forEach((element) => {
-        element.addEventListener("click", btnAddClicked, false );
-        function btnAddClicked (e) {
-            e.target.style.color = "red";
-        }
-    })*/
-
-
-
 
 }
 
-addToWishlist()
-
-/*
-const btnTest = document.querySelectorAll(".card-body .btn");
-        btnTest.forEach((element) => {
-        element.addEventListener("click", btnAddClicked, false );
-        function btnAddClicked (e) {
-            console.log(`${e.target.textContent}`);
-        }
-    })
-*/
-
+function addToWishlist (accessoryArr, callback) {
+    //console.log(accessory);
+     console.log (allItems());
+    const allAccessories = document.querySelectorAll(".accessory");
+    console.log(accessoryArr);
+}
 
 
