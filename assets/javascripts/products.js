@@ -41,7 +41,7 @@ function Accessory(name, price, color, imageHref) {
 
 /*---------------------------------------------TASK 04-----------------------------------------------------*/
 
-/*const allAccessories = document.querySelectorAll(".accessory");
+const allAccessories = document.querySelectorAll(".accessory");
 const accessoryArr = [];
    for (let i = 0; i < allAccessories.length; i++) {
        const valName = allAccessories[i].children[0].children[2].children[0].textContent;
@@ -49,9 +49,9 @@ const accessoryArr = [];
        const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
        const valImageHref = allAccessories[i].children[0].children[1].src;
        accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
-    }*/
+    }
 
-function allItems () {
+/*function allItems () {
     const allAccessories = document.querySelectorAll(".accessory");
     const accessoryArr = [];
     for (let i = 0; i < allAccessories.length; i++) {
@@ -61,9 +61,9 @@ function allItems () {
        const valImageHref = allAccessories[i].children[0].children[1].src;
        accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
     }
-    //return accessoryArr;
+    return accessoryArr;
 
-}
+}*/
 
 
 
@@ -194,10 +194,9 @@ function loadRemoteAccessories(e, callback) {
 
         case "hats":
             clearAll();
-
-          /*  accessoryArr.forEach((element) => {
+            accessoryArr.forEach((element) => {
                 displayAccessory(element);
-            })*/
+            })
 
             break;
 
@@ -239,16 +238,31 @@ function loadRemoteAccessories(e, callback) {
             }
             glovesRequest.send();
             break;
-
     }
-
 }
 
-function addToWishlist (accessoryArr, callback) {
-    //console.log(accessory);
-     console.log (allItems());
+
+
+function addToWishlist (accessoryArr) {
+
     const allAccessories = document.querySelectorAll(".accessory");
-    console.log(accessoryArr);
+    const addBtn = document.querySelectorAll(".card-body .btn");
+    addBtn.forEach((element) => {
+        element.addEventListener("click", btnAddClicked, false);
+        function btnAddClicked (element) {
+            element.target.style.color = "red";
+        }
+    });
+
+   /* addBtn.addEventListener("click", addBtnClicked, false);
+    function addBtnClicked (e) {
+        e.target.style.color = "red";
+    }*/
+
+
+
+    console.log(addBtn);
 }
 
 
+addToWishlist();
