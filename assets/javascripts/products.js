@@ -193,14 +193,16 @@ function loadRemoteAccessories(e, callback) {
     switch (e.target.textContent.toLocaleLowerCase()) {
 
         case "hats":
+
             clearAll();
             accessoryArr.forEach((element) => {
                 displayAccessory(element);
             })
-
+            addToWishlist();
             break;
 
         case "socks":
+
             clearAll();
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false);
@@ -210,7 +212,9 @@ function loadRemoteAccessories(e, callback) {
                     displayAccessory(socksArray[i]);
                 }
             }
+
             socksRequest.send();
+            addToWishlist();
             break;
 
         case "sunglasses":
@@ -223,7 +227,9 @@ function loadRemoteAccessories(e, callback) {
                     displayAccessory(sunglassesSet[i]);
                 }
             }
+
             sunglassesRequest.send();
+            addToWishlist();
             break;
 
         case "gloves":
@@ -236,7 +242,9 @@ function loadRemoteAccessories(e, callback) {
                     displayAccessory(glovesSet[i]);
                 }
             }
+
             glovesRequest.send();
+            addToWishlist();
             break;
     }
 }
@@ -254,15 +262,7 @@ function addToWishlist (accessoryArr) {
         }
     });
 
-   /* addBtn.addEventListener("click", addBtnClicked, false);
-    function addBtnClicked (e) {
-        e.target.style.color = "red";
-    }*/
-
-
-
-    console.log(addBtn);
 }
 
 
-addToWishlist();
+
