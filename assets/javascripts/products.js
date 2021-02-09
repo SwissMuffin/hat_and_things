@@ -251,7 +251,7 @@ function loadRemoteAccessories(e, callback) {
 
 
 
-function addToWishlist (accessoryArr) {
+function addToWishlist (accessoryArr) { //This function is turning the "Add to wishlist" button's caption red, just for testing purposes only.
 
     const allAccessories = document.querySelectorAll(".accessory");
     const addBtn = document.querySelectorAll(".card-body .btn");
@@ -264,5 +264,5 @@ function addToWishlist (accessoryArr) {
 
 }
 
-
+addToWishlist(); // temporary. Just for testing.
 
