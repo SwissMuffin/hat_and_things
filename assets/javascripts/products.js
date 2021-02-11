@@ -20,6 +20,9 @@ function Accessory(name, price, color, imageHref) {
     this.imageHref = imageHref;
 }
 
+Accessory.prototype.toString = function () {
+    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
+}
 /* --------------------------------------------TASK 03-----------------------------------------------------*/
 
 /*const allAccessories = [
@@ -43,13 +46,13 @@ function Accessory(name, price, color, imageHref) {
 
 const allAccessories = document.querySelectorAll(".accessory");
 const accessoryArr = [];
-   for (let i = 0; i < allAccessories.length; i++) {
-       const valName = allAccessories[i].children[0].children[2].children[0].textContent;
-       const valPrice = allAccessories[i].children[0].children[0].textContent;
-       const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
-       const valImageHref = allAccessories[i].children[0].children[1].src;
-       accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
-    }
+for (let i = 0; i < allAccessories.length; i++) {
+    const valName = allAccessories[i].children[0].children[2].children[0].textContent;
+    const valPrice = allAccessories[i].children[0].children[0].textContent;
+    const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
+    const valImageHref = allAccessories[i].children[0].children[1].src;
+    accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
+}
 
 /*function allItems () {
     const allAccessories = document.querySelectorAll(".accessory");
@@ -66,51 +69,50 @@ const accessoryArr = [];
 }*/
 
 
+function displayAccessory(anAccessory) {
 
-    function displayAccessory (anAccessory) {
+    const accessoryPrice = document.createElement("div");
+    accessoryPrice.className = "currency btn btn-light disabled";
+    accessoryPrice.textContent = anAccessory.price;
 
-        const accessoryPrice = document.createElement("div");
-        accessoryPrice.className = "currency btn btn-light disabled";
-        accessoryPrice.textContent = anAccessory.price;
+    const accessoryImage = document.createElement("img");
+    accessoryImage.className = "card-img-top";
+    accessoryImage.src = anAccessory.imageHref;
 
-        const accessoryImage = document.createElement("img");
-        accessoryImage.className = "card-img-top";
-        accessoryImage.src = anAccessory.imageHref;
+    const accessoryName = document.createElement("h5");
+    accessoryName.className = "card-title";
+    accessoryName.textContent = anAccessory.name;
 
-        const accessoryName = document.createElement("h5");
-        accessoryName.className = "card-title";
-        accessoryName.textContent = anAccessory.name;
+    const accessoryColor = document.createElement("p");
+    accessoryColor.className = "card-text";
+    accessoryColor.textContent = "Color: ";
 
-        const accessoryColor = document.createElement("p");
-        accessoryColor.className = "card-text";
-        accessoryColor.textContent = "Color: ";
+    const accessoryColorValue = document.createElement("em");
+    accessoryColorValue.className = "card-text";
+    accessoryColorValue.textContent = anAccessory.color; // This will be de additional class to be created for the filter
+    accessoryColor.appendChild(accessoryColorValue);
 
-        const accessoryColorValue = document.createElement("em");
-        accessoryColorValue.className = "card-text";
-        accessoryColorValue.textContent = anAccessory.color; // This will be de additional class to be created for the filter
-        accessoryColor.appendChild(accessoryColorValue);
+    const accessoryButton = document.createElement("button");
+    accessoryButton.className = "btn btn-outline-primary";
+    accessoryButton.textContent = "Add to wishlist!";
 
-        const accessoryButton = document.createElement("button");
-        accessoryButton.className = "btn btn-outline-primary";
-        accessoryButton.textContent = "Add to wishlist!";
+    const accessoryBody = document.createElement("div");
+    accessoryBody.className = "card-body text-center";
+    accessoryBody.appendChild(accessoryName);
+    accessoryBody.appendChild(accessoryColor);
+    accessoryBody.appendChild(accessoryButton);
 
-        const accessoryBody = document.createElement("div");
-        accessoryBody.className = "card-body text-center";
-        accessoryBody.appendChild(accessoryName);
-        accessoryBody.appendChild(accessoryColor);
-        accessoryBody.appendChild(accessoryButton);
+    const accessoryCard = document.createElement("div");
+    accessoryCard.className = "card my-3";
+    accessoryCard.appendChild(accessoryPrice);
+    accessoryCard.appendChild(accessoryImage);
+    accessoryCard.appendChild(accessoryBody);
 
-        const accessoryCard = document.createElement("div");
-        accessoryCard.className = "card my-3";
-        accessoryCard.appendChild(accessoryPrice);
-        accessoryCard.appendChild(accessoryImage);
-        accessoryCard.appendChild(accessoryBody);
+    const accessoryAccessory = document.createElement("div");
+    accessoryAccessory.className = "accessory col-sm-4";
+    accessoryAccessory.appendChild(accessoryCard);
 
-        const accessoryAccessory = document.createElement("div");
-        accessoryAccessory.className = "accessory col-sm-4";
-        accessoryAccessory.appendChild(accessoryCard);
-
-        document.querySelector("#products").appendChild(accessoryAccessory);
+    document.querySelector("#products").appendChild(accessoryAccessory);
 }
 
 /*-------------------------------------FILTERS BY COLOR----------------------------------------------------------------*/
@@ -122,7 +124,7 @@ function highlightSelectedFilter() {
         element.classList.remove("active");
         element.onload = (e) => {
             if (valColor === e.target.textContent.toLowerCase()) {
-            element.setAttribute("class", "btn btn-outline-secondary active");
+                element.setAttribute("class", "btn btn-outline-secondary active");
             }
         }
     })
@@ -145,36 +147,36 @@ function filterAccessoryByColor(e) {
 
 }
 
- const btnRed = document.querySelector(".btn-group").children[0];
-    btnRed.addEventListener("click", highlightSelectedFilter, false);
-    btnRed.addEventListener("click", filterAccessoryByColor, false);
+const btnRed = document.querySelector(".btn-group").children[0];
+btnRed.addEventListener("click", highlightSelectedFilter, false);
+btnRed.addEventListener("click", filterAccessoryByColor, false);
 
- const btnBlue = document.querySelector(".btn-group").children[1];
-    btnBlue.addEventListener("click", highlightSelectedFilter, false);
-    btnBlue.addEventListener("click", filterAccessoryByColor, false);
+const btnBlue = document.querySelector(".btn-group").children[1];
+btnBlue.addEventListener("click", highlightSelectedFilter, false);
+btnBlue.addEventListener("click", filterAccessoryByColor, false);
 
- const btnGreen = document.querySelector(".btn-group").children[2];
-    btnGreen.addEventListener("click", highlightSelectedFilter, false);
-    btnGreen.addEventListener("click", filterAccessoryByColor, false);
+const btnGreen = document.querySelector(".btn-group").children[2];
+btnGreen.addEventListener("click", highlightSelectedFilter, false);
+btnGreen.addEventListener("click", filterAccessoryByColor, false);
 
- const btnYellow = document.querySelector(".btn-group").children[3];
-    btnYellow.addEventListener("click", highlightSelectedFilter, false);
-    btnYellow.addEventListener("click", filterAccessoryByColor, false);
+const btnYellow = document.querySelector(".btn-group").children[3];
+btnYellow.addEventListener("click", highlightSelectedFilter, false);
+btnYellow.addEventListener("click", filterAccessoryByColor, false);
 
- const btnAll = document.querySelector(".btn-group").children[4];
-    btnAll.addEventListener("click", highlightSelectedFilter, false);
-    btnAll.addEventListener("click", filterAccessoryByColor, false);
+const btnAll = document.querySelector(".btn-group").children[4];
+btnAll.addEventListener("click", highlightSelectedFilter, false);
+btnAll.addEventListener("click", filterAccessoryByColor, false);
 
 /* --------------------- Btn accessorys, Socks, Sunglasses--------------------------------- */
 
 const btnNavhat = document.querySelector(".navbar-nav").children[0];
-    btnNavhat.addEventListener("click", loadRemoteAccessories, false);
+btnNavhat.addEventListener("click", loadRemoteAccessories, false);
 
 const btnNavSocks = document.querySelector(".navbar-nav").children[1];
-    btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
+btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
 
 const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
-    btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
+btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
 
 const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
@@ -214,7 +216,7 @@ function loadRemoteAccessories(e, callback) {
             }
 
             socksRequest.send();
-            addToWishlist();
+            //addToWishlist();
             break;
 
         case "sunglasses":
@@ -229,7 +231,7 @@ function loadRemoteAccessories(e, callback) {
             }
 
             sunglassesRequest.send();
-            addToWishlist();
+            //addToWishlist();
             break;
 
         case "gloves":
@@ -239,30 +241,173 @@ function loadRemoteAccessories(e, callback) {
             glovesRequest.onload = () => {
                 let glovesSet = JSON.parse(glovesRequest.responseText);
                 for (let i = 0; i < glovesSet.length; i++) {
-                    displayAccessory(glovesSet[i]);
+                    displayAccessory(glovesSet[i]); //position in the array unique can be used
                 }
             }
 
             glovesRequest.send();
-            addToWishlist();
+            //addToWishlist();
             break;
     }
 }
 
+/*function addToWishlist (accessory) {
+
+    const addBtn = document.querySelectorAll(".card-body .btn");
+
+        addBtn.forEach((btnElements, btnIndex) => {
+
+            btnElements.addEventListener("click", btnAddClicked, false);
+
+            function btnAddClicked (e) {
+
+            let accessoryAsJson = JSON.stringify(accessory);
+            localStorage.setItem('accessory1', accessoryAsJson);
+            console.log(accessoryAsJson);
+            console.log(e);
+            console.log(accessory);
+
+        }
+
+    });
+
+}*/
+
+addToWishlist(accessoryArr[0])//
+
+/* The above function is giving different the same object due to the fact that the addToWishlist(accessoryArry[0] is
+* pointing to the first accessory of the page.
+*
+* When target button clicked is different corresponding to each target it is called upon.
+* */
 
 
-function addToWishlist (accessoryArr) { //This function is turning the "Add to wishlist" button's caption red, just for testing purposes only.
-
+/*function addToWishlist (accessory) { //This function is turning the "Add to wishlist" button's caption red, just for testing purposes only.
+    //console.log("I am here");
     const allAccessories = document.querySelectorAll(".accessory");
     const addBtn = document.querySelectorAll(".card-body .btn");
-    addBtn.forEach((element) => {
-        element.addEventListener("click", btnAddClicked, false);
-        function btnAddClicked (element) {
-            element.target.style.color = "red";
+    allAccessories.forEach((accessoryElements, accessoryIndex) => {
+
+        addBtn.forEach((btnElements, btnIndex) => {
+
+            btnElements.addEventListener("click", btnAddClicked, false);
+
+            function btnAddClicked (e) {
+
+                if (accessoryIndex === btnIndex ) {
+                    //console.log(`${accessoryIndex} ${btnIndex}`)
+                    console.log(accessory);
+
+                }
+
+            let accessoryAsJson = JSON.stringify(accessory);
+            localStorage.setItem('accessory1', accessoryAsJson);
+
+
+            /!*   if () {
+                console.log(localStorage.length);
+                //localStorage.removeItem('accessory1');
+            }*!/
+            //localStorage.removeItem('accessory1');
+            //console.log(accessoryAsJson);
         }
+
     });
+
+    })
+}*/
+
+function addToWishlist(accessory) { //This function is turning the "Add to wishlist" button's caption red, just for testing purposes only.
+
+/*    function clearItem(accessory) {
+        const productParent = document.querySelectorAll("products");
+        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
+
+        productChild.forEach((element) => {
+
+            element.addEventListener("click", clearItem, false);
+            function clearAccessory(e) {
+               console.log(e);
+            }
+
+            //productParent.removeChild(document.querySelector(".accessory"));
+        })
+    }*/
+
+    allAccessories.forEach((accessory, index) => {
+
+        accessory.addEventListener("click", btnAddClick, false);
+
+        function btnAddClick(e) {
+
+            const productParent = document.querySelectorAll("products");
+            const productChild = document.querySelectorAll(".accessory");
+
+            accessory = {
+                valName: accessory.children[0].children[2].children[0].textContent,
+                valPrice: accessory.children[0].children[0].textContent,
+                valColor: accessory.children[0].children[2].children[1].textContent,
+                valImageHref: accessory.children[0].children[1].src
+            }
+
+
+
+
+            //let accessoryAsJsonArr = JSON.stringify(accessory);
+
+
+            let accessoryAsJson1 = JSON.stringify(accessory);
+            localStorage.setItem('accessory1', accessoryAsJson1);
+
+
+             let accessoryAsJson2 = JSON.stringify(accessory);
+            localStorage.setItem('accessory2', accessoryAsJson2);
+
+             let accessoryAsJson3 = JSON.stringify(accessory);
+            localStorage.setItem('accessory3', accessoryAsJson3);
+
+            const accessoryAsJsonArray = [];
+            accessoryAsJsonArray.push(
+                accessoryAsJson1,
+                accessoryAsJson2,
+                accessoryAsJson3
+            )
+            //let accessoryAsJsonArray I have to pass this array to json.
+            localStorage.setItem('accessory4', accessoryAsJsonArray)
+
+            //accessoryAsJsonArray.map((element))
+
+
+            //console.log(accessory, index);
+            console.log(accessoryAsJson1);
+
+
+            const cardToBeClearedParent = e.target.parentElement.parentElement.parentElement.parentElement;
+            const cardToBeClearedChild = e.target.parentElement.parentElement.parentElement;
+
+            cardToBeClearedParent.removeChild(cardToBeClearedChild);
+
+            //clearItem(accessory);
+        }
+    })
 
 }
 
-addToWishlist(); // temporary. Just for testing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

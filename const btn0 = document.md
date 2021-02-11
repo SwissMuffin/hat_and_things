@@ -1,0 +1,30 @@
+```javascript
+const btn0 = document.querySelector("#products").children[0].children[0].children[2].children[2];
+btn0.addEventListener("click", addToWishlist, false);
+const btn1 = document.querySelector("#products").children[1].children[0].children[2].children[2];
+btn1.addEventListener("click", addToWishlist, false);
+const btn2 = document.querySelector("#products").children[2].children[0].children[2].children[2];
+btn2.addEventListener("click", addToWishlist, false);
+const btn3 = document.querySelector("#products").children[3].children[0].children[2].children[2];
+btn3.addEventListener("click", addToWishlist, false);
+const btn4 = document.querySelector("#products").children[4].children[0].children[2].children[2];
+btn4.addEventListener("click", addToWishlist, false);
+const btn5 = document.querySelector("#products").children[5].children[0].children[2].children[2];
+btn5.addEventListener("click", addToWishlist, false);
+const btn6 = document.querySelector("#products").children[6].children[0].children[2].children[2];
+btn6.addEventListener("click", addToWishlist, false);
+const btn7 = document.querySelector("#products").children[7].children[0].children[2].children[2];
+btn7.addEventListener("click", addToWishlist, false);
+const btn8 = document.querySelector("#products").children[8].children[0].children[2].children[2];
+btn8.addEventListener("click", addToWishlist, false);
+const btn9 = document.querySelector("#products").children[9].children[0].children[2].children[2];
+btn9.addEventListener("click", addToWishlist, false);
+const btn10 = document.querySelector("#products").children[10].children[0].children[2].children[2];
+btn10.addEventListener("click", addToWishlist, false);
+const btn11 = document.querySelector("#products").children[11].children[0].children[2].children[2];
+btn11.addEventListener("click", addToWishlist, false);
+const btn12 = document.querySelector("#products").children[12].children[0].children[2].children[2];
+btn12.addEventListener("click", addToWishlist, false);
+const btn13 = document.querySelector("#products").children[13].children[0].children[2].children[2];
+btn13.addEventListener("click", addToWishlist, false);
+```
