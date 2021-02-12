@@ -220,6 +220,7 @@ function loadRemoteAccessories(e, callback) {
             break;
 
         case "sunglasses":
+
             clearAll();
             let sunglassesRequest = new XMLHttpRequest();
             sunglassesRequest.open('GET', './sunglasses.json', false);
@@ -231,6 +232,7 @@ function loadRemoteAccessories(e, callback) {
             }
 
             sunglassesRequest.send();
+
             //addToWishlist();
             break;
 
@@ -275,73 +277,22 @@ function loadRemoteAccessories(e, callback) {
 
 addToWishlist(accessoryArr[0])//
 
-/* The above function is giving different the same object due to the fact that the addToWishlist(accessoryArry[0] is
-* pointing to the first accessory of the page.
-*
-* When target button clicked is different corresponding to each target it is called upon.
-* */
 
+function addToWishlist(accessory) {
 
-/*function addToWishlist (accessory) { //This function is turning the "Add to wishlist" button's caption red, just for testing purposes only.
-    //console.log("I am here");
-    const allAccessories = document.querySelectorAll(".accessory");
-    const addBtn = document.querySelectorAll(".card-body .btn");
-    allAccessories.forEach((accessoryElements, accessoryIndex) => {
-
-        addBtn.forEach((btnElements, btnIndex) => {
-
-            btnElements.addEventListener("click", btnAddClicked, false);
-
-            function btnAddClicked (e) {
-
-                if (accessoryIndex === btnIndex ) {
-                    //console.log(`${accessoryIndex} ${btnIndex}`)
-                    console.log(accessory);
-
-                }
-
-            let accessoryAsJson = JSON.stringify(accessory);
-            localStorage.setItem('accessory1', accessoryAsJson);
-
-
-            /!*   if () {
-                console.log(localStorage.length);
-                //localStorage.removeItem('accessory1');
-            }*!/
-            //localStorage.removeItem('accessory1');
-            //console.log(accessoryAsJson);
-        }
-
-    });
-
-    })
-}*/
-
-function addToWishlist(accessory) { //This function is turning the "Add to wishlist" button's caption red, just for testing purposes only.
-
-/*    function clearItem(accessory) {
-        const productParent = document.querySelectorAll("products");
-        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
-
-        productChild.forEach((element) => {
-
-            element.addEventListener("click", clearItem, false);
-            function clearAccessory(e) {
-               console.log(e);
-            }
-
-            //productParent.removeChild(document.querySelector(".accessory"));
-        })
-    }*/
 
     allAccessories.forEach((accessory, index) => {
+
+        // ----------------- Adding an event listener on each accessory currently loaded object ---------------
 
         accessory.addEventListener("click", btnAddClick, false);
 
         function btnAddClick(e) {
 
-            const productParent = document.querySelectorAll("products");
-            const productChild = document.querySelectorAll(".accessory");
+           /* const productParent = document.querySelectorAll("products");
+            const productChild = document.querySelectorAll(".accessory");*/
+
+            // ----------------- Setting current's event object to itself ---------------
 
             accessory = {
                 valName: accessory.children[0].children[2].children[0].textContent,
@@ -350,42 +301,26 @@ function addToWishlist(accessory) { //This function is turning the "Add to wishl
                 valImageHref: accessory.children[0].children[1].src
             }
 
-
-
-
-            //let accessoryAsJsonArr = JSON.stringify(accessory);
-
+            // ----------------- Storing current's event object on localStorage ---------------
 
             let accessoryAsJson1 = JSON.stringify(accessory);
             localStorage.setItem('accessory1', accessoryAsJson1);
 
+            // ----------------- Clearing each current's event (clicked) object off the page --------------- //
 
-             let accessoryAsJson2 = JSON.stringify(accessory);
-            localStorage.setItem('accessory2', accessoryAsJson2);
-
-             let accessoryAsJson3 = JSON.stringify(accessory);
-            localStorage.setItem('accessory3', accessoryAsJson3);
-
-            const accessoryAsJsonArray = [];
-            accessoryAsJsonArray.push(
-                accessoryAsJson1,
-                accessoryAsJson2,
-                accessoryAsJson3
-            )
-            //let accessoryAsJsonArray I have to pass this array to json.
-            localStorage.setItem('accessory4', accessoryAsJsonArray)
-
-            //accessoryAsJsonArray.map((element))
-
-
-            //console.log(accessory, index);
-            console.log(accessoryAsJson1);
-
+            // ---- Selecting current's event parent and child to be removed ----
 
             const cardToBeClearedParent = e.target.parentElement.parentElement.parentElement.parentElement;
             const cardToBeClearedChild = e.target.parentElement.parentElement.parentElement;
 
+            // ---- Child removed ----
+
             cardToBeClearedParent.removeChild(cardToBeClearedChild);
+
+            // ---- OUTPUT TEST ----
+
+            console.log(e); // Any click event that will occur on each contained accessory element.
+            console.log(accessory); // It is the same event's listener accessory object.
 
             //clearItem(accessory);
         }
