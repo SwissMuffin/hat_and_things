@@ -327,7 +327,7 @@ function addToWishlist(accessory) {
                         accessory3: accessoryArrAsJSON[2]
                     };
 
-                    // Storing the array on as JSON in each entry
+                    // Storing all entries into localStorage
 
                     localStorage.setItem('accessory1', accessoryArrAsObj.accessory1 );
                     localStorage.setItem('accessory2', accessoryArrAsObj.accessory2);
