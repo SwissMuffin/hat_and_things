@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
-      <change afterPath="$PROJECT_DIR$/addToWishList_support_Notes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02. Project outline and objectives.md" beforeDir="false" afterPath="$PROJECT_DIR$/02. Project outline and objectives.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +52,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -211,7 +209,14 @@
       <workItem from="1612989455786" duration="2374000" />
       <workItem from="1613038681141" duration="6810000" />
       <workItem from="1613054120282" duration="3242000" />
-      <workItem from="1613127148333" duration="4663000" />
+      <workItem from="1613127148333" duration="4840000" />
+      <workItem from="1613148306841" duration="115000" />
+      <workItem from="1613148569838" duration="51000" />
+      <workItem from="1613148630844" duration="1209000" />
+      <workItem from="1613303755010" duration="604000" />
+      <workItem from="1613322732929" duration="2089000" />
+      <workItem from="1613382104745" duration="7519000" />
+      <workItem from="1613398739341" duration="1098000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
