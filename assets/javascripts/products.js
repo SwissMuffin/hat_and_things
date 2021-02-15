@@ -280,13 +280,15 @@ addToWishlist(accessoryArr[0])//
 
 function addToWishlist(accessory) {
 
-
+    let accessoryArrAsJSON = [];
 
     allAccessories.forEach((accessory, index) => {
 
         // ----------------- Adding an event listener on each accessory currently loaded object ---------------
 
         accessory.addEventListener("click", btnAddClick, false);
+
+
 
         function btnAddClick(e) {
 
@@ -301,22 +303,39 @@ function addToWishlist(accessory) {
                 valImageHref: accessory.children[0].children[1].src
 
                 }
-                /*
-
-    *   Alter the `addToWishlist(accessory)` function so that *up to three* accessories can be added to the wishlist.
-    *   Each accessory will be stored with one of the keys `'accessory1'`, `'accessory2'`, or `'accessory3'`.
-    *   If there are already three accessories stored using those keys, display an `alert()` indicating that the
-    *   wishlist is full.
-    *
-    * */
                 // ----------------- Storing current's event object on localStorage ---------------
-
-                let accessoryArrAsJSON = [];
 
                 let accessoryAsJson = JSON.stringify(accessory);
                 localStorage.setItem('accessory', accessoryAsJson);
                 let accessoryAsJsonGet = localStorage.getItem('accessory');
                 localStorage.removeItem('accessory');
+
+                // Creating an a way to inject the accessory values from local storage to an array.
+
+                accessoryArrAsJSON.push(accessoryAsJsonGet);
+
+
+                // Limiting the accessory array to 3 items
+
+                if (accessoryArrAsJSON.length === 3) {
+
+                    alert("Your cart is full!");
+
+                    let accessoryArrAsObj = {
+                        accessory1: accessoryArrAsJSON[0],
+                        accessory2: accessoryArrAsJSON[1],
+                        accessory3: accessoryArrAsJSON[2]
+                    };
+
+                    // Storing the array on as JSON in each entry
+
+                    localStorage.setItem('accessory1', accessoryArrAsObj.accessory1 );
+                    localStorage.setItem('accessory2', accessoryArrAsObj.accessory2);
+                    localStorage.setItem('accessory3', accessoryArrAsObj.accessory3);
+
+                    console.log(accessoryArrAsObj);
+
+                }
 
 
              // ----------------- Clearing each current's event (clicked) object off the page --------------- //
@@ -327,13 +346,19 @@ function addToWishlist(accessory) {
 
                 // ---- OUTPUT TEST ----
 
-            console.log(accessoryAsJson); // Any click event that will occur on each contained accessory element.
-            //console.log(accessoryArrAsJSON.length); // It is the same event's listener accessory object.
+            //console.log(accessoryArrAsJSON) ; // Any click event that will occur on each contained accessory element.
+            //console.log(e.length); // It is the same event's listener accessory object.
+            //console.log(accessoryArrAsJSON);
 
             }
+
+
         }
 
-        // Creating an a way to inject the accessory values from local storage to an array.
+
+
+
+
     })
 
 

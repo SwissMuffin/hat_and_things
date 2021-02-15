@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/wishlist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
     </list>
@@ -14,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,7 +54,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -216,7 +218,7 @@
       <workItem from="1613303755010" duration="604000" />
       <workItem from="1613322732929" duration="2089000" />
       <workItem from="1613382104745" duration="7519000" />
-      <workItem from="1613398739341" duration="1098000" />
+      <workItem from="1613398739341" duration="8344000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
