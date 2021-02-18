@@ -78,7 +78,7 @@ function displayAccessory(anAccessory) {
     document.querySelector("#products").appendChild(accessoryAccessory);
 }
 
-function loadRemoteAccessories(e, callback) {
+/*function loadRemoteAccessories(e, callback) {
 
     function clearAll() {
         const productParent = document.getElementById("products");
@@ -147,20 +147,18 @@ function loadRemoteAccessories(e, callback) {
             //addToWishlist();
             break;
     }
-}
+}*/
 
+/*
 function addToWishlist(accessory) {
 
     let accessoryArrAsJSON = [];
-
-
 
     allAccessories.forEach((accessory, index) => {
 
         // ----------------- Adding an event listener on each accessory currently loaded object ---------------
 
         accessory.addEventListener("click", btnAddClick, false);
-
 
         function btnAddClick(e) {
 
@@ -226,4 +224,4 @@ function addToWishlist(accessory) {
 
         }
     })
-}
+}*/

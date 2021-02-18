@@ -146,7 +146,7 @@ const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
 
-/*function loadRemoteAccessories(e, callback) {
+function loadRemoteAccessories(e, callback) {
 
     function clearAll() {
         const productParent = document.getElementById("products");
@@ -159,12 +159,11 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
     switch (e.target.textContent.toLocaleLowerCase()) {
 
         case "hats":
-
             clearAll();
             accessoryArr.forEach((element) => {
                 displayAccessory(element);
             })
-            addToWishlist();
+             addToWishlist(accessoryArr);
             break;
 
         case "socks":
@@ -173,14 +172,13 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false);
             socksRequest.onload = () => {
-                let socksArray = JSON.parse(socksRequest.responseText);
-                for (let i = 0; i < socksArray.length; i++) {
-                    displayAccessory(socksArray[i]);
+                let socksArraySet = JSON.parse(socksRequest.responseText);
+                for (let i = 0; i < socksArraySet.length; i++) {
+                    displayAccessory(socksArraySet[i]);
                 }
+                addToWishlist(socksArraySet);
             }
-
             socksRequest.send();
-            //addToWishlist();
             break;
 
         case "sunglasses":
@@ -193,6 +191,8 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
                 for (let i = 0; i < sunglassesSet.length; i++) {
                     displayAccessory(sunglassesSet[i]);
                 }
+                addToWishlist(sunglassesSet);
+
             }
 
             sunglassesRequest.send();
@@ -209,29 +209,102 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
                 for (let i = 0; i < glovesSet.length; i++) {
                     displayAccessory(glovesSet[i]); //position in the array unique can be used
                 }
-            }
+                addToWishlist(glovesSet);
 
+            }
             glovesRequest.send();
-            //addToWishlist();
+
             break;
     }
-}*/
+}
 
-addToWishlist(accessoryArr[0])//
-
-
-/*function addToWishlist(accessory) {
+function addToWishlist() {
 
     let accessoryArrAsJSON = [];
 
+    let accessoryItems = document.querySelectorAll(".accessory");
+
+    accessoryItems.forEach((accessoryItem) => {
+
+        // ----------------- Adding an event listener on each accessory currently loaded object ---------------
+
+        accessoryItem.addEventListener("click", btnAddClick, false);
+
+        function btnAddClick(e) {
+
+            // ---- Isolating the event onto the button's accessory's target ----
+
+            if (e.target.className === "btn btn-outline-primary") {
+
+                accessoryItem = {
+                name: accessoryItem.children[0].children[2].children[0].textContent,
+                price: accessoryItem.children[0].children[0].textContent,
+                color: accessoryItem.children[0].children[2].children[1].textContent,
+                imageHref: accessoryItem.children[0].children[1].src
+
+                }
+                // ----------------- Storing current's event object on localStorage ---------------
+
+                let accessoryAsJson = JSON.stringify(accessoryItem);
+                localStorage.setItem('accessory', accessoryAsJson);
+                let accessoryAsJsonGet = localStorage.getItem('accessory');
+                localStorage.removeItem('accessory');
+
+                // Creating an a way to inject the accessory values from local storage to an array.
+
+                accessoryArrAsJSON.push(accessoryAsJsonGet);
 
 
-    allAccessories.forEach((accessory, index) => {
+                // Limiting the accessory array to 3 items
+
+                if (accessoryArrAsJSON.length === 3) {
+
+                    alert("Your cart is full!");
+
+                    let accessoryArrAsObj = {
+                        accessory1: accessoryArrAsJSON[0],
+                        accessory2: accessoryArrAsJSON[1],
+                        accessory3: accessoryArrAsJSON[2]
+                    };
+
+                    // Storing all entries into localStorage
+
+                    localStorage.setItem('accessory1', accessoryArrAsObj.accessory1 );
+                    localStorage.setItem('accessory2', accessoryArrAsObj.accessory2);
+                    localStorage.setItem('accessory3', accessoryArrAsObj.accessory3);
+
+                    //console.log(accessoryArrAsObj);
+
+                }
+
+
+             // ----------------- Clearing each current's event (clicked) object off the page --------------- //
+
+                const cardToBeClearedParent = e.target.parentElement.parentElement.parentElement.parentElement;
+                const cardToBeClearedChild = e.target.parentElement.parentElement.parentElement;
+                cardToBeClearedParent.removeChild(cardToBeClearedChild);
+
+                // ---- OUTPUT TEST ----
+
+            //console.log(accessoryArrAsJSON) ; // Any click event that will occur on each contained accessory element.
+            //console.log(e.length); // It is the same event's listener accessory object.
+            //console.log(accessoryArrAsJSON);
+
+            }
+
+        }
+    })
+}
+
+/*function addToWishlist() {
+
+    let accessoryArrAsJSON = [];
+
+    allAccessories.forEach((accessory) => {
 
         // ----------------- Adding an event listener on each accessory currently loaded object ---------------
 
         accessory.addEventListener("click", btnAddClick, false);
-
 
         function btnAddClick(e) {
 
@@ -298,6 +371,9 @@ addToWishlist(accessoryArr[0])//
         }
     })
 }*/
+
+addToWishlist(accessoryArr);
+
 
 
 

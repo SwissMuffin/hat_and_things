@@ -50,7 +50,6 @@ function displayWishItems(callback) {
 
 displayWishItems()
 
-
 function removeFromWishlist(accessory, callback) {
 
     // --- Selection of each button element of the current loaded page
@@ -87,7 +86,6 @@ function removeFromWishlist(accessory, callback) {
 
         }
     })
-
 
 
     /*htmlComponent.addEventListener("click", removeItem, false);
