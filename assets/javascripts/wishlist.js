@@ -1,15 +1,5 @@
-function clearAll() {
-        const productParent = document.getElementById("products");
-        const productChild = document.querySelectorAll(".col-sm-4"); // a current accessory selector
-        productChild.forEach(() => {
-            productParent.removeChild(document.querySelector(".col-sm-4"));
-        })
-    }
 
 function allAccessoriesAsItems (callback) {
-
-    //Clearing all elements of the page
-
 
     //retrieving all objects from localStorage
 
@@ -33,13 +23,13 @@ function allAccessoriesAsItems (callback) {
 
 function displayWishItems(callback) {
 
-    // --- Hiding the sample object ---
+    // --- Hiding the sample obj ect ---
 
     const sampleAccessory = document.querySelector(".col-sm-4");
     sampleAccessory.style.display = "none";
 
     allAccessoriesAsItems().forEach((element) => {
-    displayWishlist(element);
+    displayAccessory(element);
 
 
     // --- Removing all string objects from localStorage memory
@@ -56,14 +46,16 @@ function displayWishItems(callback) {
 
 }
 
+// --- Recalling the function on the page to render all elements in localStorage
+
 displayWishItems()
 
-function removeFromWishlist(callback) {
+
+function removeFromWishlist(accessory, callback) {
 
     // --- Selection of each button element of the current loaded page
 
     const htmlComponent = document.querySelectorAll(".card-body .btn");
-
 
     // --- HTML Element ---
 
@@ -74,9 +66,17 @@ function removeFromWishlist(callback) {
 
             if (e.target.className === "btn btn-outline-danger"){
 
-
                 const clickedAccessory = e.target.parentElement.parentElement.parentElement;
                 clickedAccessory.style.display = "none";
+
+
+            /*    accessory = {
+                name: accessory.children[0].children[2].children[0].textContent,
+                price: accessory.children[0].children[0].textContent,
+                color: accessory.children[0].children[2].children[1].textContent,
+                imageHref: accessory.children[0].children[1].src
+
+                }*/
 
                 console.log (e);
 
@@ -84,7 +84,6 @@ function removeFromWishlist(callback) {
 
                }*/
             }
-
 
         }
     })
@@ -106,52 +105,6 @@ function removeFromWishlist(callback) {
 
 removeFromWishlist()
 
-
-function displayWishlist (anAccessory) {
-    const accessoryPrice = document.createElement("div");
-    accessoryPrice.className = "currency btn btn-light disabled";
-    accessoryPrice.textContent = anAccessory.price;
-
-    const accessoryImage = document.createElement("img");
-    accessoryImage.className = "card-img-top";
-    accessoryImage.src = anAccessory.imageHref;
-
-    const accessoryName = document.createElement("h5");
-    accessoryName.className = "card-title";
-    accessoryName.textContent = anAccessory.name;
-
-    const accessoryColor = document.createElement("p");
-    accessoryColor.className = "card-text";
-    accessoryColor.textContent = "Color: ";
-
-    const accessoryColorValue = document.createElement("em");
-    accessoryColorValue.className = "card-text";
-    accessoryColorValue.textContent = anAccessory.color; // This will be de additional class to be created for the filter
-    accessoryColor.appendChild(accessoryColorValue);
-
-    const accessoryButton = document.createElement("button");
-    accessoryButton.className = "btn btn-outline-danger";
-    accessoryButton.textContent = "Remove";
-
-    const accessoryBody = document.createElement("div");
-    accessoryBody.className = "card-body text-center";
-    accessoryBody.appendChild(accessoryName);
-    accessoryBody.appendChild(accessoryColor);
-    accessoryBody.appendChild(accessoryButton);
-
-    const accessoryCard = document.createElement("div");
-    accessoryCard.className = "card my-3";
-    accessoryCard.appendChild(accessoryPrice);
-    accessoryCard.appendChild(accessoryImage);
-    accessoryCard.appendChild(accessoryBody);
-
-    const accessoryAccessory = document.createElement("div");
-    accessoryAccessory.className = "accessory col-sm-4";
-    accessoryAccessory.appendChild(accessoryCard);
-
-    document.querySelector("#products").appendChild(accessoryAccessory);
-
-}
 
 
 

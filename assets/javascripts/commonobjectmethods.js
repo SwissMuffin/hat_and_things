@@ -1,6 +1,4 @@
-
-
-/*const accessory = {
+const accessory = {
     name: "<name>",
     price: "<price>",
     color: "<color>",
@@ -9,10 +7,9 @@
 
 accessory.toString = function () {
     return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
-}*/
+}
 
-
-/*function Accessory(name, price, color, imageHref) {
+function Accessory(name, price, color, imageHref) {
     this.name = name;
     this.price = price;
     this.color = color;
@@ -21,11 +18,12 @@ accessory.toString = function () {
 
 Accessory.prototype.toString = function () {
     return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
-}*/
+}
 
+const allAccessories = document.querySelectorAll(".accessory");
 
-/*const allAccessories = document.querySelectorAll(".accessory");
 const accessoryArr = [];
+
 for (let i = 0; i < allAccessories.length; i++) {
     const valName = allAccessories[i].children[0].children[2].children[0].textContent;
     const valPrice = allAccessories[i].children[0].children[0].textContent;
@@ -78,75 +76,9 @@ function displayAccessory(anAccessory) {
     accessoryAccessory.appendChild(accessoryCard);
 
     document.querySelector("#products").appendChild(accessoryAccessory);
-}*/
-
-/*-------------------------------------FILTERS BY COLOR----------------------------------------------------------------*/
-
-function highlightSelectedFilter() {
-    const activeFilter = document.querySelectorAll(".btn-group .btn");
-    activeFilter.forEach((element) => {
-        const valColor = element.textContent;
-        element.classList.remove("active");
-        element.onload = (e) => {
-            if (valColor === e.target.textContent.toLowerCase()) {
-                element.setAttribute("class", "btn btn-outline-secondary active");
-            }
-        }
-    })
 }
 
-function filterAccessoryByColor(e) {
-
-    const allCurrentProjects = document.querySelectorAll(".accessory");
-    allCurrentProjects.forEach((element) => {
-        element.style.display = "none";
-        const valColor = element.children[0].children[2].children[1].children[0].textContent;
-
-        if (valColor === e.target.textContent.toLowerCase()) {
-            element.style.display = "block";
-        } else if (e.target.textContent.toLowerCase() === "all") {
-            element.style.display = "block";
-        }
-    })
-
-}
-
-const btnRed = document.querySelector(".btn-group").children[0];
-btnRed.addEventListener("click", highlightSelectedFilter, false);
-btnRed.addEventListener("click", filterAccessoryByColor, false);
-
-const btnBlue = document.querySelector(".btn-group").children[1];
-btnBlue.addEventListener("click", highlightSelectedFilter, false);
-btnBlue.addEventListener("click", filterAccessoryByColor, false);
-
-const btnGreen = document.querySelector(".btn-group").children[2];
-btnGreen.addEventListener("click", highlightSelectedFilter, false);
-btnGreen.addEventListener("click", filterAccessoryByColor, false);
-
-const btnYellow = document.querySelector(".btn-group").children[3];
-btnYellow.addEventListener("click", highlightSelectedFilter, false);
-btnYellow.addEventListener("click", filterAccessoryByColor, false);
-
-const btnAll = document.querySelector(".btn-group").children[4];
-btnAll.addEventListener("click", highlightSelectedFilter, false);
-btnAll.addEventListener("click", filterAccessoryByColor, false);
-
-/* --------------------- Btn accessories, Socks, Sunglasses--------------------------------- */
-
-const btnNavhat = document.querySelector(".navbar-nav").children[0];
-btnNavhat.addEventListener("click", loadRemoteAccessories, false);
-
-const btnNavSocks = document.querySelector(".navbar-nav").children[1];
-btnNavSocks.addEventListener("click", loadRemoteAccessories, false);
-
-const btnNavSunglasses = document.querySelector(".navbar-nav").children[2];
-btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
-
-const btnNavGloves = document.querySelector(".navbar-nav").children[3];
-btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
-
-
-/*function loadRemoteAccessories(e, callback) {
+function loadRemoteAccessories(e, callback) {
 
     function clearAll() {
         const productParent = document.getElementById("products");
@@ -215,12 +147,9 @@ btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
             //addToWishlist();
             break;
     }
-}*/
+}
 
-addToWishlist(accessoryArr[0])//
-
-
-/*function addToWishlist(accessory) {
+function addToWishlist(accessory) {
 
     let accessoryArrAsJSON = [];
 
@@ -297,25 +226,4 @@ addToWishlist(accessoryArr[0])//
 
         }
     })
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
