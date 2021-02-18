@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javascripts/commonobjectmethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/commonobjectmethods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javascripts/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/wishlist.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +228,7 @@
       <workItem from="1613647709016" duration="5085000" />
       <workItem from="1613659513698" duration="568000" />
       <workItem from="1613660427004" duration="7800000" />
-      <workItem from="1613681649575" duration="1489000" />
+      <workItem from="1613681649575" duration="2236000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
