@@ -1,5 +1,4 @@
 /*------------------------------------------accessoryS--------------------------------------------------------*/
-
 const accessory = {
     name: "<name>",
     price: "<price>",
@@ -20,9 +19,14 @@ function Accessory(name, price, color, imageHref) {
     this.imageHref = imageHref;
 }
 
+/*Accessory.prototype.toString = function () {
+    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
+}*/
+
 Accessory.prototype.toString = function () {
     return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
 }
+
 /* --------------------------------------------TASK 03-----------------------------------------------------*/
 
 /*const allAccessories = [
@@ -289,7 +293,6 @@ function addToWishlist(accessory) {
         accessory.addEventListener("click", btnAddClick, false);
 
 
-
         function btnAddClick(e) {
 
             // ---- Isolating the event onto the button's accessory's target ----
@@ -297,10 +300,10 @@ function addToWishlist(accessory) {
             if (e.target.className === "btn btn-outline-primary") {
 
                 accessory = {
-                valName: accessory.children[0].children[2].children[0].textContent,
-                valPrice: accessory.children[0].children[0].textContent,
-                valColor: accessory.children[0].children[2].children[1].textContent,
-                valImageHref: accessory.children[0].children[1].src
+                name: accessory.children[0].children[2].children[0].textContent,
+                price: accessory.children[0].children[0].textContent,
+                color: accessory.children[0].children[2].children[1].textContent,
+                imageHref: accessory.children[0].children[1].src
 
                 }
                 // ----------------- Storing current's event object on localStorage ---------------
@@ -333,7 +336,7 @@ function addToWishlist(accessory) {
                     localStorage.setItem('accessory2', accessoryArrAsObj.accessory2);
                     localStorage.setItem('accessory3', accessoryArrAsObj.accessory3);
 
-                    console.log(accessoryArrAsObj);
+                    //console.log(accessoryArrAsObj);
 
                 }
 
@@ -352,17 +355,11 @@ function addToWishlist(accessory) {
 
             }
 
-
         }
-
-
-
-
-
     })
-
-
 }
+
+
 
 
 

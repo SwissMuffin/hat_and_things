@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02. Project outline and objectives.md" beforeDir="false" afterPath="$PROJECT_DIR$/02. Project outline and objectives.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/wishlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +219,14 @@
       <workItem from="1613303755010" duration="604000" />
       <workItem from="1613322732929" duration="2089000" />
       <workItem from="1613382104745" duration="7519000" />
-      <workItem from="1613398739341" duration="9474000" />
+      <workItem from="1613398739341" duration="9823000" />
+      <workItem from="1613408694644" duration="60000" />
+      <workItem from="1613424342252" duration="2168000" />
+      <workItem from="1613426664352" duration="909000" />
+      <workItem from="1613555284470" duration="30000" />
+      <workItem from="1613576071667" duration="6962000" />
+      <workItem from="1613593760044" duration="3126000" />
+      <workItem from="1613632512134" duration="8426000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
