@@ -1,4 +1,4 @@
-/*------------------------------------------accessoryS--------------------------------------------------------*/
+
 const accessory = {
     name: "<name>",
     price: "<price>",
@@ -10,7 +10,6 @@ accessory.toString = function () {
     return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
 }
 
-/*------------------------------------------TASK 02--------------------------------------------------------*/
 
 function Accessory(name, price, color, imageHref) {
     this.name = name;
@@ -27,26 +26,6 @@ Accessory.prototype.toString = function () {
     return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
 }
 
-/* --------------------------------------------TASK 03-----------------------------------------------------*/
-
-/*const allAccessories = [
-    product = new Accessory("Baseball cap","11.99", "red", "waccessoryever"),
-    product = new Accessory("Baseball cap", "11.99", "blue", "waccessoryever" ),
-    product = new Accessory("Baseball cap", "11.99", "yellow", "waccessoryever"),
-    product = new Accessory("Baseball cap", "11.99", "green", "waccessoryever"),
-    product = new Accessory("Beanie", "17.99", "red", "waccessoryever"),
-    product = new Accessory("Beanie", "17.99", "blue", "waccessoryever"),
-    product = new Accessory("Beanie", "17.99", "green", "waccessoryever"),
-    product = new Accessory("Straw accessory", "10.99", "green", "waccessoryever"),
-    product = new Accessory("Straw accessory", "10.99", "yellow", "waccessoryever"),
-    product = new Accessory("Trilby", "10.99", "red", "waccessoryever"),
-    product = new Accessory("Trilby", "10.99", "blue", "waccessoryever"),
-    product = new Accessory("Trilby", "10.99", "yellow", "waccessoryever"),
-    product = new Accessory("Trilby", "10.99", "blue", "waccessoryever"),
-    product = new Accessory("Trilby", "10.99", "blue", "waccessoryever")
-];*/
-
-/*---------------------------------------------TASK 04-----------------------------------------------------*/
 
 const allAccessories = document.querySelectorAll(".accessory");
 const accessoryArr = [];
@@ -57,21 +36,6 @@ for (let i = 0; i < allAccessories.length; i++) {
     const valImageHref = allAccessories[i].children[0].children[1].src;
     accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
 }
-
-/*function allItems () {
-    const allAccessories = document.querySelectorAll(".accessory");
-    const accessoryArr = [];
-    for (let i = 0; i < allAccessories.length; i++) {
-       const valName = allAccessories[i].children[0].children[2].children[0].textContent;
-       const valPrice = allAccessories[i].children[0].children[0].textContent;
-       const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
-       const valImageHref = allAccessories[i].children[0].children[1].src;
-       accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
-    }
-    return accessoryArr;
-
-}*/
-
 
 function displayAccessory(anAccessory) {
 
@@ -256,28 +220,6 @@ function loadRemoteAccessories(e, callback) {
             break;
     }
 }
-
-/*function addToWishlist (accessory) {
-
-    const addBtn = document.querySelectorAll(".card-body .btn");
-
-        addBtn.forEach((btnElements, btnIndex) => {
-
-            btnElements.addEventListener("click", btnAddClicked, false);
-
-            function btnAddClicked (e) {
-
-            let accessoryAsJson = JSON.stringify(accessory);
-            localStorage.setItem('accessory1', accessoryAsJson);
-            console.log(accessoryAsJson);
-            console.log(e);
-            console.log(accessory);
-
-        }
-
-    });
-
-}*/
 
 addToWishlist(accessoryArr[0])//
 

@@ -78,6 +78,8 @@ function removeFromWishlist(callback) {
                 const clickedAccessory = e.target.parentElement.parentElement.parentElement;
                 clickedAccessory.style.display = "none";
 
+                console.log (e);
+
               /* if (displayWishItems() === clickedAccessory) {
 
                }*/
