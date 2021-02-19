@@ -32,9 +32,9 @@ function allAccessoriesAsItems () {
 function displayWishItems() {
 
     // --- Hiding the sample obj ect ---
-
     const sampleAccessory = document.querySelector(".col-sm-4");
     sampleAccessory.style.display = "none";
+
 
     allAccessoriesAsItems().forEach((element) => {
     displayAccessory(element);

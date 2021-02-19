@@ -88,11 +88,13 @@ function loadRemoteAccessories(e, callback) {
     switch (e.target.textContent.toLocaleLowerCase()) {
 
         case "hats":
+
             clearAll();
             accessoryArr.forEach((element) => {
                 displayAccessory(element);
             })
              addToWishlist(accessoryArr);
+
             break;
 
         case "socks":
@@ -158,7 +160,6 @@ function addToWishlist() {
 
         accessoryItem.addEventListener("click", btnAddClick, false);
 
-        console.log(accessoryItem);
 
         function btnAddClick(e) {
 
