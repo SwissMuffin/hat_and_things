@@ -1,11 +1,3 @@
-   function clearAll() {
-        const productParent = document.getElementById("products");
-        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
-        productChild.forEach(() => {
-            productParent.removeChild(document.querySelector(".accessory"));
-        })
-    }
-
 
 function allAccessoriesAsItems () {
 
@@ -37,29 +29,14 @@ function displayWishItems() {
 
 
     allAccessoriesAsItems().forEach((element) => {
-    displayAccessory(element);
+        displayAccessory(element);
 
-    const removeBtn = document.querySelectorAll(".card-body .btn-outline-primary");
-
-    removeBtn.forEach((element) => {
-        element.textContent = "Remove";
-        element.className = "btn btn-outline-danger";
-    })
-
-    //console.log(removeBtn);
-
-
-    // --- Removing all string objects from localStorage memory
-
- /*   if (localStorage.length > 0) {
-
-        localStorage.removeItem('accessory1');
-        localStorage.removeItem('accessory2');
-        localStorage.removeItem('accessory3')
-
-    }*/
-
-})
+        const removeBtn = document.querySelectorAll(".card-body .btn-outline-primary");
+        removeBtn.forEach((element) => {
+            element.textContent = "Remove";
+            element.className = "btn btn-outline-danger";
+            })
+        })
 
 }
 
@@ -125,7 +102,18 @@ function removeFromWishlist(key, htmlComponent, callback) {
 
             if (e.target.className === "btn btn-outline-danger"){
 
-                const clickedAccessory = e.target.parentElement.parentElement.parentElement;
+                let clickedAccessory = e.target.parentElement.parentElement.parentElement;
+                function clearElement(clearedElement) {
+                    const productParent = document.getElementById("products");
+                    const productChild = document.querySelectorAll(".accessory");
+                    productChild.forEach(() => {
+                        productParent.removeChild(clearedElement);
+                    })
+    }
+
+
+                //console.log(clickedAccessory);
+                //let clickedAccessoryChild = ;
                 //clickedAccessory.style.display = "none";
                 //console.log(clickedAccessory);
                 //console.log(index);
@@ -133,17 +121,29 @@ function removeFromWishlist(key, htmlComponent, callback) {
                 if (index === 1) {
                     //console.log("I am number 1");
                     clickedAccessory.style.display = "none";
+                    //clearElement(clickedAccessory);
+
+                    //clearElement(clickedAccessory);
                     localStorage.removeItem('accessory1');
+                    //console.log(clickedAccessory);
+
 
                 } else if (index === 2) {
                     clickedAccessory.style.display = "none";
                     //console.log("I am number 1");
+                    //clearElement(clickedAccessory);
+
+                    //clearElement(clickedAccessory);
                     localStorage.removeItem('accessory2');
                 } else if (index === 3) {
                     clickedAccessory.style.display = "none";
                     //console.log("I am number 3");
+                    //clearElement(clickedAccessory);
+
+                    //clearElement(clickedAccessory);
                     localStorage.removeItem('accessory3');
                 }
+
 
             }
 
