@@ -66,9 +66,6 @@ btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
 const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
-
-function loadRemoteAccessories(e, callback) {
-
     function clearAll() {
         const productParent = document.getElementById("products");
         const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
@@ -76,6 +73,17 @@ function loadRemoteAccessories(e, callback) {
             productParent.removeChild(document.querySelector(".accessory"));
         })
     }
+
+
+function loadRemoteAccessories(e, callback) {
+
+/*    function clearAll() {
+        const productParent = document.getElementById("products");
+        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
+        productChild.forEach(() => {
+            productParent.removeChild(document.querySelector(".accessory"));
+        })
+    }*/
 
     switch (e.target.textContent.toLocaleLowerCase()) {
 
@@ -113,7 +121,7 @@ function loadRemoteAccessories(e, callback) {
                     displayAccessory(sunglassesSet[i]);
                 }
                 addToWishlist(sunglassesSet);
-
+                
             }
 
             sunglassesRequest.send();
@@ -149,6 +157,8 @@ function addToWishlist() {
         // ----------------- Adding an event listener on each accessory currently loaded object ---//
 
         accessoryItem.addEventListener("click", btnAddClick, false);
+
+        console.log(accessoryItem);
 
         function btnAddClick(e) {
 
@@ -208,6 +218,8 @@ function addToWishlist() {
 }
 
 addToWishlist(accessoryArr);
+
+
 
 
 

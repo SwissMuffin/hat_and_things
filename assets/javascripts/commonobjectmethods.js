@@ -78,3 +78,5 @@ function displayAccessory(anAccessory) {
     document.querySelector("#products").appendChild(accessoryAccessory);
 }
 
+
+
