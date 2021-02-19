@@ -178,6 +178,7 @@ function addToWishlist() {
 
                 let accessoryAsJson = JSON.stringify(accessoryItem);
                 localStorage.setItem('accessory', accessoryAsJson);
+
                 let accessoryAsJsonGet = localStorage.getItem('accessory');
                 localStorage.removeItem('accessory');
 
@@ -185,23 +186,27 @@ function addToWishlist() {
 
                 accessoryArrAsJSON.push(accessoryAsJsonGet);
 
-                // --- Limiting the accessory array to 3 items ---
 
-                if (accessoryArrAsJSON.length === 3) {
+                // --- Storing values from the accessoryArrAsJSON -> accessoryArrAsObj
 
-                    alert("Your cart is full!");
-
-                    let accessoryArrAsObj = {
+                let accessoryArrAsObj = {
                         accessory1: accessoryArrAsJSON[0],
                         accessory2: accessoryArrAsJSON[1],
                         accessory3: accessoryArrAsJSON[2]
                     };
 
-                    // Storing all entries into localStorage
+                     // Storing all entries into localStorage
 
                     localStorage.setItem('accessory1', accessoryArrAsObj.accessory1 );
                     localStorage.setItem('accessory2', accessoryArrAsObj.accessory2);
                     localStorage.setItem('accessory3', accessoryArrAsObj.accessory3);
+
+
+                // --- Limiting the accessory array to 3 items ---
+
+                if (accessoryArrAsJSON.length === 3) {
+
+                    alert("Your cart is full!");
 
                 }
 

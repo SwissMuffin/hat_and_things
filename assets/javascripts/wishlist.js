@@ -9,19 +9,65 @@ function allAccessoriesAsItems () {
 
     // Parsing all string objects from the values retrieved from localStorage
 
-    const accessoryAsObject1 = JSON.parse(accessory1);
-    const accessoryAsObject2 = JSON.parse(accessory2);
-    const accessoryAsObject3 = JSON.parse(accessory3);
+    // --- conditional to accept values from the localStorage as the come
+    const removeBtn = document.querySelectorAll(".card-body .btn-outline-primary");
 
     // Storing all values into an object
 
-    return [accessoryAsObject1, accessoryAsObject2, accessoryAsObject3];
+    if (localStorage.length > 0) {
 
+        if (accessory1) {
+
+            console.log("I am here");
+            const accessoryAsObject1 = JSON.parse(accessory1);
+            displayAccessory(accessoryAsObject1)
+
+            removeBtn.textContent = "Remove";
+            removeBtn.className = "btn btn-outline-danger";
+
+        } else if (accessory2) {
+
+            const accessoryAsObject1 = JSON.parse(accessory1);
+            const accessoryAsObject2 = JSON.parse(accessory2);
+
+            displayAccessory(accessoryAsObject1)
+            displayAccessory(accessoryAsObject2)
+
+            removeBtn.textContent = "Remove";
+            removeBtn.className = "btn btn-outline-danger";
+
+
+        } else if (accessory3) {
+
+            const accessoryAsObject1 = JSON.parse(accessory1);
+            const accessoryAsObject2 = JSON.parse(accessory2);
+            const accessoryAsObject3 = JSON.parse(accessory3);
+
+            displayAccessory(accessoryAsObject1);
+            displayAccessory(accessoryAsObject2);
+            displayAccessory(accessoryAsObject3);
+
+            removeBtn.textContent = "Remove";
+            removeBtn.className = "btn btn-outline-danger";
+
+        }
+
+    }
+
+
+
+
+
+    //return [accessoryAsObject1, accessoryAsObject2, accessoryAsObject3];
 }
+
+allAccessoriesAsItems();
+
 
 // allAccessories is being called and each time making use of the display functions of the current loaded objects
 
-function displayWishItems() {
+/*function displayWishItems() {
+
 
     // --- Hiding the sample obj ect ---
     const sampleAccessory = document.querySelector(".col-sm-4");
@@ -38,20 +84,20 @@ function displayWishItems() {
             })
         })
 
-}
+}*/
 
 // --- Recalling the function on the page to render all elements in localStorage
 
-displayWishItems()
+/*displayWishItems()*/
 
-const addWishListBtn1 = document.querySelectorAll(".card-body .btn-outline-danger")[1];
+/*const addWishListBtn1 = document.querySelectorAll(".card-body .btn-outline-danger")[1];
 addWishListBtn1.addEventListener("click", removeFromWishlist(), false);
 
 const addWishListBtn2 = document.querySelector(".card-body .btn-outline-danger")[2];
 addWishListBtn1.addEventListener("click", removeFromWishlist(), false);
 
 const addWishListBtn3 = document.querySelector(".card-body .btn-outline-danger")[3];
-addWishListBtn1.addEventListener("click", removeFromWishlist(), false);
+addWishListBtn1.addEventListener("click", removeFromWishlist(), false);*/
 
 
 
