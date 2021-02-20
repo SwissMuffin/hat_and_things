@@ -1,16 +1,24 @@
 
-function allAccessoriesAsItems () {
+function displayWishlistMod () {
+
+    const removeBtn = document.querySelectorAll(".card-body .btn-outline-primary");
+        removeBtn.forEach((element) => {
+            element.textContent = "Remove";
+            element.className = "btn btn-outline-danger";
+        })
+}
+
+function  displayWishlist () {
 
     //retrieving all objects from localStorage
 
-    const accessory1 = localStorage.getItem('accessory1');
-    const accessory2 = localStorage.getItem('accessory2');
-    const accessory3 = localStorage.getItem('accessory3');
 
     if (localStorage.length === 1) {
 
         const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
+
         displayAccessory(accessoryAsObject1);
+        displayWishlistMod();
 
     } else if (localStorage.length === 2) {
 
@@ -19,6 +27,7 @@ function allAccessoriesAsItems () {
 
         displayAccessory(accessoryAsObject1);
         displayAccessory(accessoryAsObject2);
+        displayWishlistMod();
 
     }else if (localStorage.length === 3) {
 
@@ -29,14 +38,11 @@ function allAccessoriesAsItems () {
         displayAccessory(accessoryAsObject1);
         displayAccessory(accessoryAsObject2);
         displayAccessory(accessoryAsObject3);
+        displayWishlistMod();
     }
 
 
-
     // Parsing all string objects from the values retrieved from localStorage
-
-
-
 
 
     // --- Testing ---
@@ -128,7 +134,7 @@ function allAccessoriesAsItems () {
 }*/
 
 
-allAccessoriesAsItems();
+displayWishlist();
 
 
 
