@@ -197,10 +197,19 @@ function addToWishlist() {
 
                      // Storing all entries into localStorage
 
-                    localStorage.setItem('accessory1', accessoryArrAsObj.accessory1 );
+                    localStorage.setItem('accessory1', accessoryArrAsObj.accessory1);
                     localStorage.setItem('accessory2', accessoryArrAsObj.accessory2);
                     localStorage.setItem('accessory3', accessoryArrAsObj.accessory3);
 
+                    // --- Logic to remove the 'undefined' entries on local storage.
+
+                    if (localStorage.accessory2 === 'undefined' & localStorage.accessory3 === 'undefined') {
+                        localStorage.removeItem('accessory2');
+                        localStorage.removeItem('accessory3');
+
+                    } else if (localStorage.accessory3 === 'undefined') {
+                        localStorage.removeItem('accessory3');
+                    }
 
                 // --- Limiting the accessory array to 3 items ---
 

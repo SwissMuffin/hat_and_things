@@ -7,14 +7,64 @@ function allAccessoriesAsItems () {
     const accessory2 = localStorage.getItem('accessory2');
     const accessory3 = localStorage.getItem('accessory3');
 
+    if (localStorage.length === 1) {
+
+        const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
+        displayAccessory(accessoryAsObject1);
+
+    } else if (localStorage.length === 2) {
+
+        const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
+        const accessoryAsObject2 = JSON.parse(localStorage.accessory2);
+
+        displayAccessory(accessoryAsObject1);
+        displayAccessory(accessoryAsObject2);
+
+    }else if (localStorage.length === 3) {
+
+        const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
+        const accessoryAsObject2 = JSON.parse(localStorage.accessory2);
+        const accessoryAsObject3 = JSON.parse(localStorage.accessory3);
+
+        displayAccessory(accessoryAsObject1);
+        displayAccessory(accessoryAsObject2);
+        displayAccessory(accessoryAsObject3);
+    }
+
+
+
     // Parsing all string objects from the values retrieved from localStorage
+
+
+
+
+
+    // --- Testing ---
+
 
     // --- conditional to accept values from the localStorage as the come
     const removeBtn = document.querySelectorAll(".card-body .btn-outline-primary");
 
     // Storing all values into an object
 
-    if (localStorage.length > 0) {
+
+    /*if (localStorage.length > 0) {
+
+        for (let i = 0; i < 3; i++) {
+            const accessoryAsObject1 = JSON.parse(accessory1);
+            displayAccessory(accessoryAsObject1);
+
+        }
+
+
+    }*/
+
+ /*   while (localStorage.accessory) {
+        console.log("I am here Here");
+        this.localStorage.length += 1;
+    }*/
+
+    /*if (localStorage.length > 0) {
 
         if (accessory1) {
 
@@ -52,7 +102,7 @@ function allAccessoriesAsItems () {
 
         }
 
-    }
+    }*/
 
 
 
@@ -61,7 +111,26 @@ function allAccessoriesAsItems () {
     //return [accessoryAsObject1, accessoryAsObject2, accessoryAsObject3];
 }
 
+//console.log(localStorage.accessory1);
+
+
+//console.log(accessoryAsObject);
+
+/*const accessoryAsObjectArr = {
+    accessory1AsObject1: JSON.parse(localStorage.accessory1),
+    accessoryAsObject2: JSON.parse(localStorage.accessory2),
+    accessoryAsObject3: JSON.parse(localStorage.accessory3)
+}*/
+
+
+/*if (localStorage.accessory2 === "undefined") {
+    console.log(" I am nowhere");
+}*/
+
+
 allAccessoriesAsItems();
+
+
 
 
 // allAccessories is being called and each time making use of the display functions of the current loaded objects
