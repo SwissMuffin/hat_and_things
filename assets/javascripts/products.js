@@ -66,24 +66,16 @@ btnNavSunglasses.addEventListener("click", loadRemoteAccessories, false);
 const btnNavGloves = document.querySelector(".navbar-nav").children[3];
 btnNavGloves.addEventListener("click", loadRemoteAccessories, false);
 
-    function clearAll() {
-        const productParent = document.getElementById("products");
-        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
-        productChild.forEach(() => {
+function clearAll() {
+    const productParent = document.getElementById("products");
+    const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
+    productChild.forEach(() => {
             productParent.removeChild(document.querySelector(".accessory"));
         })
-    }
+}
 
 
-function loadRemoteAccessories(e, callback) {
-
-/*    function clearAll() {
-        const productParent = document.getElementById("products");
-        const productChild = document.querySelectorAll(".accessory"); // a current accessory selector
-        productChild.forEach(() => {
-            productParent.removeChild(document.querySelector(".accessory"));
-        })
-    }*/
+function loadRemoteAccessories(e) {
 
     switch (e.target.textContent.toLocaleLowerCase()) {
 
@@ -218,7 +210,6 @@ function addToWishlist() {
                     alert("Your cart is full!");
 
                 }
-
 
              // ----------------- Clearing each current's event (clicked) object off the page --------------- //
 
