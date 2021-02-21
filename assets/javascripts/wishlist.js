@@ -13,7 +13,11 @@ function displayWishlistMod () {
             element.textContent = "Remove";
             element.className = "btn btn-outline-danger";
         })
+
+
 }
+
+
 
 function  displayWishlist () {
 
@@ -24,11 +28,14 @@ function  displayWishlist () {
         // --- Hiding the sample object ---
 
         const sampleAccessory = document.querySelector(".col-sm-4");
-        sampleAccessory.style.display = "none";
+        sampleAccessory.style.display = "block";
 
     }
 
     if (localStorage.length === 1) {
+
+        const emptyWishListItem = document.querySelector(".col-sm-4");
+        emptyWishListItem.style.display = "none";
 
         const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
 
@@ -36,6 +43,9 @@ function  displayWishlist () {
         displayWishlistMod();
 
     } else if (localStorage.length === 2) {
+
+        const emptyWishListItem = document.querySelector(".col-sm-4");
+        emptyWishListItem.style.display = "none";
 
         const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
         const accessoryAsObject2 = JSON.parse(localStorage.accessory2);
@@ -45,6 +55,9 @@ function  displayWishlist () {
         displayWishlistMod();
 
     } else if (localStorage.length === 3) {
+
+        const emptyWishListItem = document.querySelector(".col-sm-4");
+        emptyWishListItem.style.display = "none";
 
         const accessoryAsObject1 = JSON.parse(localStorage.accessory1);
         const accessoryAsObject2 = JSON.parse(localStorage.accessory2);
