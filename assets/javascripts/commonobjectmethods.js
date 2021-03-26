@@ -6,8 +6,8 @@ const accessory = {
 };
 
 accessory.toString = function () {
-    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
-}
+    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`;
+};
 
 function Accessory(name, price, color, imageHref) {
     this.name = name;
@@ -17,8 +17,8 @@ function Accessory(name, price, color, imageHref) {
 }
 
 Accessory.prototype.toString = function () {
-    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`
-}
+    return `name ${this.name} price ${this.price} color ${this.color} imageHref ${this.imageHref}`;
+};
 
 const allAccessories = document.querySelectorAll(".accessory");
 
@@ -29,7 +29,7 @@ for (let i = 0; i < allAccessories.length; i++) {
     const valPrice = allAccessories[i].children[0].children[0].textContent;
     const valColor = allAccessories[i].children[0].children[2].children[1].children[0].textContent;
     const valImageHref = allAccessories[i].children[0].children[1].src;
-    accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));// each iteration creates a new object according to the accessory Prototype.
+    accessoryArr.push(new Accessory(`${valName}`, `${valPrice}`, `${valColor}`, `${valImageHref}`));
 }
 
 function displayAccessory(anAccessory) {
@@ -52,7 +52,7 @@ function displayAccessory(anAccessory) {
 
     const accessoryColorValue = document.createElement("em");
     accessoryColorValue.className = "card-text";
-    accessoryColorValue.textContent = anAccessory.color; // This will be de additional class to be created for the filter
+    accessoryColorValue.textContent = anAccessory.color;
     accessoryColor.appendChild(accessoryColorValue);
 
     const accessoryButton = document.createElement("button");
@@ -78,5 +78,28 @@ function displayAccessory(anAccessory) {
     document.querySelector("#products").appendChild(accessoryAccessory);
 }
 
+function activeItem (btnClass, callback) {
+
+    let accessoryItems = document.querySelectorAll(".accessory");
+    let btnTargetClass = btnClass;
+
+    accessoryItems.forEach((element, index) => {
+
+
+        element.addEventListener("click", btnAddClick, false);
+
+        function btnAddClick(e) {
+
+            if (e.target.className == `${btnTargetClass}`) {
+                callback(element);
+                //e.target.style.background = "gray";
+                e.target.parentElement.parentElement.parentElement.style.background = "green";
+
+
+            }
+        }
+    });
+
+}
 
 

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/javascripts/commonobjectmethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/commonobjectmethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/wishlist.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Ex_Files_JavaScript_EssT" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -240,6 +243,7 @@
       <workItem from="1613852956175" duration="4638000" />
       <workItem from="1613860721406" duration="220000" />
       <workItem from="1613927580998" duration="530000" />
+      <workItem from="1616796314189" duration="444000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
