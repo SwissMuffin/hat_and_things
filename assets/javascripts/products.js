@@ -80,7 +80,6 @@ function loadRemoteAccessories(e) {
     switch (e.target.textContent.toLocaleLowerCase()) {
 
         case "hats":
-
             clearAll();
             accessoryArr.forEach((element) => {
                 displayAccessory(element);
@@ -93,7 +92,6 @@ function loadRemoteAccessories(e) {
         case "socks":
 
             clearAll();
-
             let socksRequest = new XMLHttpRequest();
             socksRequest.open('GET', './socks.json', false);
             socksRequest.onload = () => {

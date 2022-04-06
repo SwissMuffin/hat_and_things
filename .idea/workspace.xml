@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dd1c2d-986f-4984-bc71-8aca5e4c9e98" name="Default Changelist" comment="Socks and sunglasses. Done!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javascripts/commonobjectmethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/commonobjectmethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/javascripts/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/javascripts/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/javascripts/wishlist.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1imRJd801MSy7RRygr5Nb6ActNQ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,6 +52,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
@@ -244,6 +247,7 @@
       <workItem from="1613860721406" duration="220000" />
       <workItem from="1613927580998" duration="530000" />
       <workItem from="1616796314189" duration="444000" />
+      <workItem from="1649231715258" duration="1053000" />
     </task>
     <task id="LOCAL-00001" summary="Laptop version is now synched with the PC one.">
       <created>1607617177846</created>
@@ -415,7 +419,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
