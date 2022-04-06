@@ -207,7 +207,7 @@ function addToWishlist(accessory){
     }
 
     if (localStorage.length == 3 ) {
-        alert ("You have reached 3 items Kuririn!")
+        alert ("You have reached max of 3 items!")
     }
 
 }
